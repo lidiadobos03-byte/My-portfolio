@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #fbf3ee;
+  --bg-deep: #f7e9e3;
+  --surface: rgba(255, 251, 248, 0.76);
+  --card: rgba(255, 248, 244, 0.88);
+  --heading: #4a3039;
+  --text: #63464f;
+  --muted: #8b6d76;
+  --line: rgba(143, 77, 109, 0.14);
+  --line-strong: rgba(143, 77, 109, 0.24);
+  --accent: #8f4d6d;
+  --accent-deep: #b56e88;
+  --accent-soft: #9aa88f;
+  --shadow: 0 28px 70px rgba(95, 58, 71, 0.14);
+  --shadow-soft: 0 14px 28px rgba(95, 58, 71, 0.08);
+
+  --sans: 'Manrope', 'Avenir Next', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --serif: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--sans);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(181, 110, 136, 0.18), transparent 24%),
+    radial-gradient(circle at right 14%, rgba(154, 168, 143, 0.2), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(224, 188, 170, 0.26), transparent 30%),
+    linear-gradient(180deg, #fff8f4, var(--bg-deep));
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(12px);
+  opacity: 0.9;
+}
+
+body::before {
+  top: -10rem;
+  right: -8rem;
+  background: radial-gradient(circle, rgba(181, 110, 136, 0.2), transparent 62%);
+}
+
+body::after {
+  left: -10rem;
+  bottom: -10rem;
+  background: radial-gradient(circle, rgba(154, 168, 143, 0.2), transparent 64%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(181, 110, 136, 0.18);
+  color: var(--heading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
