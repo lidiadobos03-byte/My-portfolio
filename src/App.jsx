@@ -171,6 +171,8 @@ const contactLinks = [
   },
 ]
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`
+
 function App() {
   const currentYear = new Date().getFullYear()
   const [heroPortraitError, setHeroPortraitError] = useState(false)
@@ -276,7 +278,7 @@ function App() {
               ) : (
                 <img
                   className="hero-portrait-close-image"
-                  src="/lidia-portrait-fashion-cutout.png"
+                  src={publicAsset('lidia-portrait-fashion-cutout.png')}
                   alt="Editorial portrait of Lidia Dobos"
                   onError={() => setHeroPortraitError(true)}
                 />
@@ -503,7 +505,7 @@ function App() {
             <div className="profile-visual-frame">
               <img
                 className="profile-visual-image"
-                src="/lidia-editorial-walk.jpg"
+                src={publicAsset('lidia-editorial-walk.jpg')}
                 alt="Black and white editorial portrait of Lidia Dobos walking"
               />
               <div className="profile-visual-overlay">
