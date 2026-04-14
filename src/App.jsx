@@ -7,8 +7,8 @@ const quickStats = [
     label: 'in digital design, UI/UX, and visual communication',
   },
   {
-    value: '11 public repos',
-    label: 'visible GitHub work across interfaces, showcases, and backend practice',
+    value: '13 public repos',
+    label: 'visible GitHub work across luxury concepts, showcases, product ideas, and backend practice',
   },
   {
     value: 'Remote-ready',
@@ -34,8 +34,64 @@ const highlights = [
 const projects = [
   {
     code: '01',
-    title: 'WebCraft',
+    title: 'AEVUM',
     featured: true,
+    type: 'Luxury watch house concept',
+    year: '2026',
+    role: 'Brand direction + front-end',
+    summary:
+      'Designed and built a multi-page static concept for a private watch house, balancing luxury storytelling, collector trust, and refined product presentation.',
+    impact:
+      'The project brings together editorial landing sections, a filterable collection page, sell/trade journeys, private-club positioning, SEO-ready metadata, and launch-ready static assets.',
+    stack: ['HTML5', 'CSS', 'JavaScript', 'SEO foundations'],
+    accent: '#8f7a55',
+    watermark: 'AE',
+    featuredEyebrow: 'Latest featured project',
+    featuredHeadline: 'AEVUM sharpens my portfolio toward luxury commerce and editorial storytelling.',
+    featuredSectionNote:
+      'It combines premium atmosphere, structured navigation, and collector-facing trust signals in a polished static experience.',
+    featuredLead:
+      'A concept for a private maison of horology where brand presence, catalogue clarity, and discreet conversion paths all support one another.',
+    featuredDirections: [
+      'Editorial luxury homepage',
+      'Filterable watch collection',
+      'Sell / trade enquiry flow',
+      'Private club positioning',
+    ],
+    featuredMetrics: [
+      {
+        label: 'Pages',
+        value: '7 launch-ready pages',
+      },
+      {
+        label: 'Collection UX',
+        value: 'Filterable catalogue + enquiry paths',
+      },
+      {
+        label: 'Brand feel',
+        value: 'Editorial, discreet, premium',
+      },
+    ],
+    featuredSpotlight: {
+      label: 'Luxury watch house concept',
+      title: 'Editorial atmosphere with a structured catalogue underneath it.',
+      text:
+        'A composed multi-page experience shaped for collectors, with careful copy, premium visuals, and clear routes into private contact.',
+    },
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
+      },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/lidiadobos03-byte/digital-catalogue',
+      },
+    ],
+  },
+  {
+    code: '02',
+    title: 'WebCraft',
     type: 'Premium web showcase',
     year: '2024 - Present',
     role: 'UI/UX + front-end',
@@ -57,7 +113,7 @@ const projects = [
     ],
   },
   {
-    code: '02',
+    code: '03',
     title: 'CVPerfect',
     type: 'Product concept',
     year: '2026',
@@ -76,7 +132,7 @@ const projects = [
     ],
   },
   {
-    code: '03',
+    code: '04',
     title: 'Task Manager API',
     type: 'Backend portfolio project',
     year: '2026',
@@ -93,28 +149,6 @@ const projects = [
         href: 'https://github.com/lidiadobos03-byte/task-manager-api',
       },
     ],
-  },
-]
-
-const webcraftDirections = [
-  'Restaurant hospitality',
-  'Corporate consulting',
-  'Fashion e-commerce',
-  'Legal premium',
-]
-
-const webcraftMetrics = [
-  {
-    label: 'Creative range',
-    value: '4 distinct visual directions',
-  },
-  {
-    label: 'Build style',
-    value: 'Responsive static implementation',
-  },
-  {
-    label: 'Focus',
-    value: 'Polish, clarity, and conversion',
   },
 ]
 
@@ -164,9 +198,9 @@ const contactLinks = [
     external: true,
   },
   {
-    label: 'Selected live project',
-    value: 'webcraft.cvperfect.online',
-    href: 'https://webcraft.cvperfect.online',
+    label: 'Latest live project',
+    value: 'lidiadobos03-byte.github.io/digital-catalogue',
+    href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
     external: true,
   },
 ]
@@ -309,14 +343,14 @@ function App() {
               refined the moment it appears on screen.
             </p>
             <p className="hero-note">
-              The project closest to my heart is <strong>WebCraft</strong>, a
-              premium showcase built to present multiple visual directions with
-              clarity, polish, and strong creative identity.
+              Recent work includes <strong>AEVUM</strong>, a luxury watch-house
+              concept built to feel editorial, discreet, and commercially aware
+              from the very first screen.
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                See WebCraft
+                See selected work
               </a>
               <a
                 className="button button-secondary"
@@ -369,32 +403,38 @@ function App() {
           <section className="section flagship-section" id="projects">
             <div className="flagship-header reveal">
               <div>
-                <p className="eyebrow">Flagship project</p>
-                <h2>WebCraft is the clearest expression of my visual voice.</h2>
+                <p className="eyebrow">
+                  {featuredProject.featuredEyebrow ?? 'Featured project'}
+                </p>
+                <h2>
+                  {featuredProject.featuredHeadline ??
+                    `${featuredProject.title} is a key expression of my current direction.`}
+                </h2>
               </div>
               <p className="section-note">
-                It holds the strongest mix of editorial presence, niche-specific
-                direction, responsive execution, and premium presentation in my
-                portfolio.
+                {featuredProject.featuredSectionNote ??
+                  'It brings together strong visual identity, clear structure, and polished front-end execution.'}
               </p>
             </div>
 
             <div className="flagship-layout">
               <article className="flagship-story reveal delay-1">
+                <span className="flagship-watermark" aria-hidden="true">
+                  {featuredProject.watermark ?? featuredProject.code}
+                </span>
                 <p className="flagship-label">
                   {featuredProject.type} / {featuredProject.year}
                 </p>
                 <h3>{featuredProject.title}</h3>
                 <p className="flagship-lead">
-                  The project I feel most personally connected to, built to show how
-                  one visual language can stretch across multiple industries without
-                  losing elegance or consistency.
+                  {featuredProject.featuredLead ??
+                    'A project that shows how visual identity, product clarity, and front-end implementation can work together.'}
                 </p>
                 <p className="flagship-copy">{featuredProject.summary}</p>
                 <p className="flagship-copy">{featuredProject.impact}</p>
 
-                <ul className="flagship-directions" aria-label="WebCraft directions">
-                  {webcraftDirections.map((direction) => (
+                <ul className="flagship-directions" aria-label={`${featuredProject.title} highlights`}>
+                  {(featuredProject.featuredDirections ?? []).map((direction) => (
                     <li key={direction}>{direction}</li>
                   ))}
                 </ul>
@@ -417,16 +457,16 @@ function App() {
               <aside className="flagship-panel reveal delay-2">
                 <div className="flagship-stage">
                   <article className="flagship-window flagship-window-main">
-                    <span>Editorial web showcase</span>
-                    <strong>Four directions. One premium standard.</strong>
-                    <p>
-                      A polished multi-page presentation built to feel intentional,
-                      immersive, and commercially aware.
-                    </p>
+                    <span>{featuredProject.featuredSpotlight?.label ?? 'Featured build'}</span>
+                    <strong>
+                      {featuredProject.featuredSpotlight?.title ??
+                        'Thoughtful digital presence with polished structure.'}
+                    </strong>
+                    <p>{featuredProject.featuredSpotlight?.text ?? featuredProject.summary}</p>
                   </article>
 
                   <div className="flagship-window-grid">
-                    {webcraftMetrics.map((metric) => (
+                    {(featuredProject.featuredMetrics ?? []).map((metric) => (
                       <article key={metric.label} className="flagship-window">
                         <span>{metric.label}</span>
                         <strong>{metric.value}</strong>
@@ -443,11 +483,11 @@ function App() {
           <div className="section-header reveal">
             <div>
               <p className="eyebrow">More selected work</p>
-              <h2>Additional projects that extend the portfolio beyond the flagship.</h2>
+              <h2>Additional projects that show range beyond the latest featured concept.</h2>
             </div>
             <p className="section-note">
-              These pieces show how my work expands from visual and product direction
-              into structured backend practice and scalable digital concepts.
+              These pieces show how my work expands across premium brand showcases,
+              product concepts, and structured backend practice.
             </p>
           </div>
 

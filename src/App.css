@@ -679,7 +679,7 @@
 }
 
 .secondary-projects-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .flagship-header {
@@ -717,18 +717,6 @@
     linear-gradient(160deg, rgba(255, 251, 248, 0.96), rgba(248, 239, 234, 0.94));
 }
 
-.flagship-story::before {
-  content: 'WC';
-  position: absolute;
-  top: -10px;
-  right: 22px;
-  color: rgba(143, 77, 109, 0.08);
-  font-family: var(--serif);
-  font-size: clamp(5.6rem, 10vw, 8rem);
-  line-height: 1;
-  letter-spacing: -0.08em;
-}
-
 .flagship-label {
   margin: 0;
   color: var(--accent-deep);
@@ -744,6 +732,18 @@
   font-family: var(--serif);
   font-size: clamp(2.8rem, 5vw, 4.4rem);
   line-height: 0.96;
+}
+
+.flagship-watermark {
+  position: absolute;
+  top: -10px;
+  right: 22px;
+  color: rgba(143, 77, 109, 0.08);
+  font-family: var(--serif);
+  font-size: clamp(5.6rem, 10vw, 8rem);
+  line-height: 1;
+  letter-spacing: -0.08em;
+  pointer-events: none;
 }
 
 .flagship-lead {
