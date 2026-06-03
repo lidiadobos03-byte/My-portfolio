@@ -3,31 +3,31 @@ import './App.css'
 
 const quickStats = [
   {
-    value: '5+ years',
-    label: 'in digital design, UI/UX, and visual communication',
+    value: '4 proiecte',
+    label: 'selectate pentru portofoliu',
   },
   {
-    value: '13 public repos',
-    label: 'visible GitHub work across luxury concepts, showcases, product ideas, and backend practice',
+    value: '13 repo-uri publice',
+    label: 'experimente și build-uri vizibile',
   },
   {
-    value: 'Remote-ready',
-    label: 'clear communication and organized delivery for distributed collaboration',
+    value: 'Web + produs',
+    label: 'de la interfață la structură tehnică',
   },
 ]
 
 const highlights = [
   {
-    title: 'Visual design with UX clarity',
-    text: 'I care about how a product feels at first glance, but also about how easily someone can move through it and trust it.',
+    title: 'Pagini complete',
+    text: 'Proiectele includ secțiuni reale, navigare, CTA-uri și pagini pregătite pentru prezentare.',
   },
   {
-    title: 'Design-to-build mindset',
-    text: 'I enjoy work that moves from concept and wireframe into responsive front-end implementation, not just presentation visuals.',
+    title: 'Interfețe responsive',
+    text: 'Layout-uri adaptate pentru desktop și mobil, cu atenție la ritm, spațiere și lizibilitate.',
   },
   {
-    title: 'Strong client collaboration',
-    text: 'My background combines design execution, client support, and remote teamwork, which helps me keep projects practical and well paced.',
+    title: 'Structură tehnică',
+    text: 'Portofoliul include și proiecte de produs sau backend, nu doar pagini vizuale.',
   },
 ]
 
@@ -36,51 +36,51 @@ const projects = [
     code: '01',
     title: 'AEVUM',
     featured: true,
-    type: 'Luxury watch house concept',
+    type: 'Concept premium pentru ceasuri de lux',
     year: '2026',
-    role: 'Brand direction + front-end',
+    role: 'Direcție de brand + front-end',
     summary:
-      'Designed and built a multi-page static concept for a private watch house, balancing luxury storytelling, collector trust, and refined product presentation.',
+      'Un concept luxury multi-page care îmbină povestea brandului, navigarea structurată și încrederea colecționarilor.',
     impact:
-      'The project brings together editorial landing sections, a filterable collection page, sell/trade journeys, private-club positioning, SEO-ready metadata, and launch-ready static assets.',
-    stack: ['HTML5', 'CSS', 'JavaScript', 'SEO foundations'],
+      'Combină secțiuni editoriale, catalog filtrabil, fluxuri de vânzare / schimb și asset-uri statice pregătite pentru lansare.',
+    stack: ['HTML5', 'CSS', 'JavaScript', 'Baze SEO'],
     accent: '#8f7a55',
     watermark: 'AE',
-    featuredEyebrow: 'Latest featured project',
-    featuredHeadline: 'AEVUM sharpens my portfolio toward luxury commerce and editorial storytelling.',
+    featuredEyebrow: 'Cel mai nou proiect evidențiat',
+    featuredHeadline: 'AEVUM este proiectul principal din portofoliu.',
     featuredSectionNote:
-      'It combines premium atmosphere, structured navigation, and collector-facing trust signals in a polished static experience.',
+      'Un concept luxury editorial, cu pagini multiple, catalog filtrabil și trasee clare spre contact.',
     featuredLead:
-      'A concept for a private maison of horology where brand presence, catalogue clarity, and discreet conversion paths all support one another.',
+      'Un concept pentru o casă de ceasuri, cu pagini de prezentare, catalog și flux de contact.',
     featuredDirections: [
-      'Editorial luxury homepage',
-      'Filterable watch collection',
-      'Sell / trade enquiry flow',
-      'Private club positioning',
+      'Homepage editorial',
+      'Colecție filtrabilă',
+      'Flux pentru vânzare / schimb',
+      'Zonă de club privat',
     ],
     featuredMetrics: [
       {
-        label: 'Pages',
-        value: '7 launch-ready pages',
+        label: 'Pagini',
+        value: '7 pagini pregătite pentru lansare',
       },
       {
-        label: 'Collection UX',
-        value: 'Filterable catalogue + enquiry paths',
+        label: 'Catalog',
+        value: 'Navigare filtrabilă + solicitări',
       },
       {
-        label: 'Brand feel',
-        value: 'Editorial, discreet, premium',
+        label: 'Direcție',
+        value: 'Editorială, discretă, comercială',
       },
     ],
     featuredSpotlight: {
-      label: 'Luxury watch house concept',
-      title: 'Editorial atmosphere with a structured catalogue underneath it.',
+      label: 'Concept premium pentru ceasuri de lux',
+      title: 'Atmosferă editorială susținută de un catalog structurat.',
       text:
-        'A composed multi-page experience shaped for collectors, with careful copy, premium visuals, and clear routes into private contact.',
+        'O experiență pentru colecționari, cu text atent, vizualuri de produs și trasee clare spre contact privat.',
     },
     links: [
       {
-        label: 'Live site',
+        label: 'Site live',
         href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
       },
       {
@@ -92,18 +92,18 @@ const projects = [
   {
     code: '02',
     title: 'WebCraft',
-    type: 'Premium web showcase',
-    year: '2024 - Present',
+    type: 'Showcase web',
+    year: '2024 - Prezent',
     role: 'UI/UX + front-end',
     summary:
-      'Designed and built a premium static portfolio for WebCraft with four distinct concepts for restaurant, corporate, fashion e-commerce, and legal niches.',
+      'Un showcase multi-page cu patru concepte de nișă, layout-uri responsive și interacțiuni vanilla.',
     impact:
-      'The project combines responsive landing pages, vanilla JavaScript interactions, async forms, and basic SEO structure across a polished multi-page showcase.',
-    stack: ['HTML5', 'CSS', 'JavaScript', 'Responsive design'],
+      'Arată versatilitate în direcții pentru restaurant, corporate, fashion și servicii juridice.',
+    stack: ['HTML5', 'CSS', 'JavaScript', 'Design responsive'],
     accent: '#a9647e',
     links: [
       {
-        label: 'Live site',
+        label: 'Site live',
         href: 'https://webcraft.cvperfect.online',
       },
       {
@@ -115,13 +115,13 @@ const projects = [
   {
     code: '03',
     title: 'CVPerfect',
-    type: 'Product concept',
+    type: 'Concept de produs',
     year: '2026',
-    role: 'Product design + architecture',
+    role: 'Product design + arhitectură',
     summary:
-      'A full-stack CV platform concept structured with a Next.js frontend and a Node/Express backend prepared for payments, PDF workflows, and deployment.',
+      'Un concept full-stack pentru CV-uri, cu Next.js, Express, pregătire pentru plăți și fluxuri orientate spre PDF.',
     impact:
-      'The repository outlines reusable components, app routes, backend utilities, Stripe integration points, and a scalable product direction for a digital CV service.',
+      'Structurat pentru UI reutilizabil, utilitare backend și scalare viitoare.',
     stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
     accent: '#c3a0b2',
     links: [
@@ -134,13 +134,13 @@ const projects = [
   {
     code: '04',
     title: 'Task Manager API',
-    type: 'Backend portfolio project',
+    type: 'Proiect backend de portofoliu',
     year: '2026',
-    role: 'API design + structure',
+    role: 'Design API + structură',
     summary:
-      'A REST API built with Java 17 and Spring Boot for task management, including layered architecture, validation, filtering, Swagger, H2, and tests.',
+      'Un REST API în Spring Boot pentru managementul task-urilor, cu validare, filtrare, Swagger și teste.',
     impact:
-      'It shows my portfolio is expanding beyond interface work into structured backend projects with documentation, clear API design, and real development discipline.',
+      'Arată structură backend dincolo de lucrul pe interfețe.',
     stack: ['Java 17', 'Spring Boot', 'JPA', 'Swagger'],
     accent: '#9da98d',
     links: [
@@ -156,38 +156,38 @@ const careerHighlights = [
   {
     step: '2021',
     title: 'Magic Advertising',
-    text: 'Worked as Graphic Designer and Client Support, creating responsive visuals for web campaigns, digital materials, and interface-related assets while collaborating with development teams.',
+    text: 'Design grafic, vizualuri de campanie, suport pentru clienți și colaborare cu echipe de dezvoltare.',
   },
   {
     step: '2018',
     title: 'Aqua Dental Clinic',
-    text: 'Worked as an Operational Coordinator in London, strengthening communication, organization, and client-facing collaboration in an international environment.',
+    text: 'Operațiuni și coordonare cu clienții în Londra, cu accent pe comunicare și ritm de lucru.',
   },
   {
-    step: 'Now',
-    title: 'Design with implementation in mind',
-    text: 'My current focus is web design, UI/UX, and front-end work that is accessible, conversion-aware, and ready to move from concept into production.',
+    step: 'Acum',
+    title: 'Direcția actuală',
+    text: 'Web design, UI/UX și front-end pentru proiecte clare, responsive și ușor de prezentat.',
   },
 ]
 
 const skillGroups = [
   {
-    title: 'Design and UX',
-    items: ['UI/UX Design', 'Web Design', 'Wireframing', 'Prototyping', 'Design Systems'],
+    title: 'Direcție de design',
+    items: ['UI/UX Design', 'Web Design', 'Wireframing', 'Prototipare', 'Design Systems'],
   },
   {
-    title: 'Front-end tools',
+    title: 'Implementare',
     items: ['HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion', 'React'],
   },
   {
-    title: 'Product and delivery',
-    items: ['Accessibility', 'UX Research', 'CRO mindset', 'Client communication', 'Remote collaboration'],
+    title: 'Livrare',
+    items: ['Accesibilitate', 'UX Research', 'Mindset CRO', 'Comunicare cu clienții', 'Colaborare remote'],
   },
 ]
 
 const contactLinks = [
   {
-    label: 'Phone',
+    label: 'Telefon',
     value: '+40 740 334 757',
     href: 'tel:+40740334757',
   },
@@ -198,7 +198,7 @@ const contactLinks = [
     external: true,
   },
   {
-    label: 'Latest live project',
+    label: 'Cel mai nou proiect live',
     value: 'lidiadobos03-byte.github.io/digital-catalogue',
     href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
     external: true,
@@ -255,14 +255,14 @@ function App() {
           <span className="brand-mark">LD</span>
           <span className="brand-copy">
             <strong>Lidia Dobos</strong>
-            <span>Web Designer / UI/UX Designer</span>
+            <span>Designer Web / UI-UX</span>
           </span>
         </a>
 
-        <nav className="site-nav" aria-label="Main navigation">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
+        <nav className="site-nav" aria-label="Navigare principală">
+          <a href="#projects">Proiecte</a>
+          <a href="#about">Despre</a>
+          <a href="#skills">Skill-uri</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -273,39 +273,34 @@ function App() {
             <div className="panel-orbit panel-orbit-one" aria-hidden="true" />
             <div className="panel-orbit panel-orbit-two" aria-hidden="true" />
 
-            <p className="panel-label">Romania / Open to remote work</p>
-            <h2>
-              Quiet luxury, visual clarity, and digital presence shaped with
-              intent.
-            </h2>
+            <p className="panel-label">Portofoliu web / România</p>
+            <h2>Proiecte web vizuale, responsive și ușor de parcurs.</h2>
             <p className="panel-copy">
-              I work where interface design, content rhythm, and front-end execution
-              meet, with close attention to accessibility, elegance, and trust.
+              O selecție de proiecte de interfață, showcase, produs și backend,
+              prezentate clar pentru colaborări în România sau remote.
             </p>
 
             <div className="hero-visual-stage">
               <div className="hero-visual-mist" aria-hidden="true" />
               <article className="hero-editorial-card">
-                <span>Signature presence</span>
-                <strong>Poised, polished, and human at first glance.</strong>
+                <span>Proiect principal</span>
+                <strong>AEVUM, concept luxury cu pagini multiple și catalog filtrabil.</strong>
                 <p>
-                  Websites, portfolios, and interface work shaped to feel elevated,
-                  warm, and immediately credible.
+                  Include homepage editorial, colecție, formular de interes și
+                  structură pregătită pentru prezentare.
                 </p>
               </article>
 
               <div className="hero-ribbon">
-                <span>Selected focus</span>
-                <strong>
-                  Editorial websites, premium portfolios, and thoughtful interface systems
-                </strong>
+                <span>În portofoliu</span>
+                <strong>AEVUM, WebCraft, CVPerfect și Task Manager API</strong>
               </div>
 
               {heroPortraitError ? (
                 <div
                   className="hero-portrait-fallback"
                   role="img"
-                  aria-label="Portrait placeholder for Lidia Dobos"
+                  aria-label="Placeholder portret pentru Lidia Dobos"
                 >
                   <span>LD</span>
                 </div>
@@ -313,13 +308,13 @@ function App() {
                 <img
                   className="hero-portrait-close-image"
                   src={publicAsset('lidia-portrait-fashion-cutout.png')}
-                  alt="Editorial portrait of Lidia Dobos"
+                  alt="Portret editorial cu Lidia Dobos"
                   onError={() => setHeroPortraitError(true)}
                 />
               )}
             </div>
 
-            <ul className="stack-list" aria-label="Primary stack">
+            <ul className="stack-list" aria-label="Stack principal">
               <li>Figma</li>
               <li>UI/UX Design</li>
               <li>Tailwind CSS</li>
@@ -327,30 +322,23 @@ function App() {
               <li>React</li>
               <li>Accessibility</li>
             </ul>
-
-            <div className="mini-note">
-              <span>Selected focus</span>
-              <strong>premium interfaces, responsive systems, thoughtful delivery</strong>
-            </div>
           </div>
 
           <div className="hero-copy reveal delay-1">
-            <p className="eyebrow">Editorial Web Designer / UI-UX Designer</p>
-            <h1 className="hero-title">A more editorial kind of digital presence.</h1>
+            <p className="eyebrow">Web Design / UI-UX / Front-end</p>
+            <h1 className="hero-title">Portofoliu de proiecte web și produs.</h1>
             <p className="hero-text">
-              I shape websites, interfaces, and personal brands with a fashion-editorial
-              eye, balancing polish, atmosphere, and clarity so the final result feels
-              refined the moment it appears on screen.
+              Proiecte construite pentru prezentare clară: website-uri, concepte de
+              produs, interfețe responsive și un exemplu backend.
             </p>
             <p className="hero-note">
-              Recent work includes <strong>AEVUM</strong>, a luxury watch-house
-              concept built to feel editorial, discreet, and commercially aware
-              from the very first screen.
+              Cel mai nou proiect: <strong>AEVUM</strong>, un concept luxury pentru
+              ceasuri, cu structură multi-page și catalog filtrabil.
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                See selected work
+                Vezi proiectele selectate
               </a>
               <a
                 className="button button-secondary"
@@ -358,11 +346,11 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                View GitHub
+                Vezi GitHub
               </a>
             </div>
 
-            <ul className="stat-grid" aria-label="Core strengths">
+            <ul className="stat-grid" aria-label="Puncte forte principale">
               {quickStats.map((stat, index) => (
                 <li key={stat.value} className={`stat-card reveal delay-${Math.min(index + 1, 3)}`}>
                   <strong>{stat.value}</strong>
@@ -376,13 +364,12 @@ function App() {
         <section className="section highlights-section">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">What I bring to a project</p>
-              <h2>Design that is polished, usable, and ready to move forward.</h2>
+              <p className="eyebrow">Ce arată portofoliul</p>
+              <h2>Proiecte complete, cu design, conținut și structură.</h2>
             </div>
             <p className="section-note">
-              My work sits between visual craft and practical delivery. I want a
-              project to feel strong in presentation, but also clear enough to
-              build, scale, and hand off well.
+              Accentul cade pe lucrări vizibile: pagini, fluxuri, componente,
+              tehnologii și linkuri către site-uri live sau repository-uri.
             </p>
           </div>
 
@@ -404,16 +391,16 @@ function App() {
             <div className="flagship-header reveal">
               <div>
                 <p className="eyebrow">
-                  {featuredProject.featuredEyebrow ?? 'Featured project'}
+                  {featuredProject.featuredEyebrow ?? 'Proiect evidențiat'}
                 </p>
                 <h2>
                   {featuredProject.featuredHeadline ??
-                    `${featuredProject.title} is a key expression of my current direction.`}
+                    `${featuredProject.title} este proiectul principal din portofoliu.`}
                 </h2>
               </div>
               <p className="section-note">
                 {featuredProject.featuredSectionNote ??
-                  'It brings together strong visual identity, clear structure, and polished front-end execution.'}
+                  'Include identitate vizuală, structură clară și execuție front-end.'}
               </p>
             </div>
 
@@ -428,12 +415,12 @@ function App() {
                 <h3>{featuredProject.title}</h3>
                 <p className="flagship-lead">
                   {featuredProject.featuredLead ??
-                    'A project that shows how visual identity, product clarity, and front-end implementation can work together.'}
+                    'Un proiect care combină direcție vizuală, structură de produs și implementare front-end.'}
                 </p>
                 <p className="flagship-copy">{featuredProject.summary}</p>
                 <p className="flagship-copy">{featuredProject.impact}</p>
 
-                <ul className="flagship-directions" aria-label={`${featuredProject.title} highlights`}>
+                <ul className="flagship-directions" aria-label={`Repere ${featuredProject.title}`}>
                   {(featuredProject.featuredDirections ?? []).map((direction) => (
                     <li key={direction}>{direction}</li>
                   ))}
@@ -457,10 +444,10 @@ function App() {
               <aside className="flagship-panel reveal delay-2">
                 <div className="flagship-stage">
                   <article className="flagship-window flagship-window-main">
-                    <span>{featuredProject.featuredSpotlight?.label ?? 'Featured build'}</span>
+                    <span>{featuredProject.featuredSpotlight?.label ?? 'Build evidențiat'}</span>
                     <strong>
                       {featuredProject.featuredSpotlight?.title ??
-                        'Thoughtful digital presence with polished structure.'}
+                        'Prezență digitală cu structură clară.'}
                     </strong>
                     <p>{featuredProject.featuredSpotlight?.text ?? featuredProject.summary}</p>
                   </article>
@@ -482,12 +469,12 @@ function App() {
         <section className="section projects-section">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">More selected work</p>
-              <h2>Additional projects that show range beyond the latest featured concept.</h2>
+              <p className="eyebrow">Alte proiecte selectate</p>
+              <h2>Alte direcții: showcase, produs și backend.</h2>
             </div>
             <p className="section-note">
-              These pieces show how my work expands across premium brand showcases,
-              product concepts, and structured backend practice.
+              Fiecare card include pe scurt tipul proiectului, rolul, tehnologiile
+              și linkul relevant.
             </p>
           </div>
 
@@ -515,7 +502,7 @@ function App() {
                   <p>{project.summary}</p>
                   <p className="project-impact">{project.impact}</p>
 
-                  <ul className="tag-list" aria-label={`${project.title} technologies`}>
+                  <ul className="tag-list" aria-label={`Tehnologii ${project.title}`}>
                     {project.stack.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -546,127 +533,96 @@ function App() {
               <img
                 className="profile-visual-image"
                 src={publicAsset('lidia-editorial-walk.jpg')}
-                alt="Black and white editorial portrait of Lidia Dobos walking"
+                alt="Portret editorial alb-negru cu Lidia Dobos mergând"
               />
               <div className="profile-visual-overlay">
-                <span>Editorial frame</span>
+                <span>Cadru editorial</span>
                 <strong>
                   <span>Lidia</span>
                   <span>Dobos</span>
                 </strong>
-                <p>Editorial Web Designer / UI-UX Designer</p>
+                <p>Designer Web Editorial / UI-UX</p>
               </div>
             </div>
 
             <div className="profile-visual-caption">
-              <p className="eyebrow">Editorial portrait</p>
+              <p className="eyebrow">Pe scurt</p>
               <h3>Lidia Dobos</h3>
               <p>
-                A more personal frame that brings presence, confidence, and a strong
-                visual identity into the portfolio.
+                Web design, UI/UX și front-end, cu focus pe proiecte clare și prezentabile.
               </p>
             </div>
           </aside>
 
           <article className="profile-copy reveal delay-1">
-            <p className="eyebrow">About me</p>
-            <p className="profile-intro">
-              Creative direction, interface clarity, and premium digital presentation.
-            </p>
-            <h2>A creative designer with a practical, product-focused mindset.</h2>
+            <p className="eyebrow">Pe scurt</p>
+            <p className="profile-intro">Web design, UI/UX, front-end.</p>
+            <h2>Experiență practică în design vizual și proiecte digitale.</h2>
             <p>
-              I come from a design background shaped by graphic work, client
-              communication, and UI/UX thinking. What matters most to me is
-              creating interfaces that feel polished, readable, and confident
-              without becoming heavy or confusing.
+              Portofoliul pornește din design grafic și comunicare vizuală, apoi
+              merge spre UI/UX, front-end și structură de produs.
             </p>
             <p>
-              I like projects where the visual side and the functional side meet
-              in a clean way. That means thoughtful hierarchy, responsive
-              layouts, accessible choices, and enough structure for the work to
-              move smoothly from concept into implementation.
+              Mai jos sunt listate experiența relevantă și direcțiile tehnice care
+              susțin proiectele prezentate.
             </p>
 
             <div className="profile-quote">
-              <span>Design approach</span>
+              <span>Focus</span>
               <strong>
-                I want the work to feel elegant at first glance and trustworthy
-                the moment someone starts using it.
+                Proiecte web clare, responsive și ușor de explicat unui client sau unei echipe.
               </strong>
             </div>
 
             <div className="profile-facts">
               <article className="fact-card">
-                <span>Base</span>
-                <strong>Romania / Remote</strong>
+                <span>Bază</span>
+                <strong>România / Remote</strong>
               </article>
               <article className="fact-card">
-                <span>Languages</span>
-                <strong>Romanian, English</strong>
+                <span>Limbi</span>
+                <strong>Română, Engleză</strong>
               </article>
               <article className="fact-card">
-                <span>Strength</span>
-                <strong>UI clarity + premium presentation</strong>
+                <span>Focus</span>
+                <strong>UI clar + layout responsive</strong>
               </article>
               <article className="fact-card">
-                <span>Best fit</span>
-                <strong>Websites, portfolios, product interfaces</strong>
+                <span>Proiecte</span>
+                <strong>Website-uri, portofolii, interfețe de produs</strong>
               </article>
             </div>
 
+            <div className="profile-journey">
+              <p className="panel-label">Traseu profesional</p>
+              <div className="journey-list">
+                {careerHighlights.map((item) => (
+                  <article key={item.step} className="journey-card">
+                    <span className="journey-step">{item.step}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
             <div className="profile-signoff">
-              <span>Current direction</span>
+              <span>Direcție</span>
               <strong>
-                Premium portfolios, refined landing pages, and digital products
-                that balance beauty with structure.
+                Portofolii, landing page-uri și produse digitale cu structură clară.
               </strong>
             </div>
           </article>
         </section>
 
-        <section className="section story-section">
-          <article className="story-card reveal">
-            <p className="eyebrow">Experience path</p>
-            <h2>From visual communication to digital products and interface work.</h2>
-            <p>
-              I enjoy turning dense ideas into pages and interfaces that feel
-              elegant, accessible, and easy to trust. My background is rooted in
-              graphic design and UI/UX, but I am most energized when the work
-              also connects to real product structure and implementation.
-            </p>
-            <p>
-              I work best on projects where design should do more than look
-              good. It should guide attention, support action, and stay coherent
-              from concept to execution.
-            </p>
-          </article>
-
-          <div className="workflow-list">
-            {careerHighlights.map((item, index) => (
-              <article
-                key={item.step}
-                className={`workflow-card reveal delay-${Math.min(index + 1, 3)}`}
-              >
-                <span className="workflow-step">{item.step}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="section skills-section" id="skills">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">Skills</p>
-              <h2>Design, front-end craft, and product-minded delivery.</h2>
+              <p className="eyebrow">Skill-uri</p>
+              <h2>Skill-uri folosite în proiectele din portofoliu.</h2>
             </div>
             <p className="section-note">
-              The portfolio reflects the tools and strengths already visible in my
-              CV and public repositories, while staying easy to extend as new work
-              is added.
+              Lista rămâne practică: design, implementare și câteva aspecte de livrare.
             </p>
           </div>
 
@@ -690,16 +646,15 @@ function App() {
         <section className="section contact-section" id="contact">
           <div className="contact-copy reveal">
             <p className="eyebrow">Contact</p>
-            <h2>Open to remote collaboration, product design work, and polished web builds.</h2>
+            <h2>Contact pentru proiecte web, portofolii sau interfețe de produs.</h2>
             <p>
-              If you need someone who can think visually, communicate clearly,
-              and help shape a digital product into something structured and
-              credible, I would love to hear about it.
+              Pentru o colaborare în România sau remote, poți trimite un email,
+              suna direct sau verifica proiectele de pe GitHub.
             </p>
           </div>
 
           <aside className="contact-card reveal delay-1">
-            <p className="panel-label">Quick contact</p>
+            <p className="panel-label">Contact rapid</p>
             <a className="contact-mail" href="mailto:lidiadobos03@gmail.com">
               lidiadobos03@gmail.com
             </a>
@@ -719,15 +674,15 @@ function App() {
               ))}
             </div>
 
-            <p className="contact-meta">Romania / Remote</p>
-            <p className="contact-meta">Available for international collaboration and personal projects</p>
+            <p className="contact-meta">România / Remote</p>
+            <p className="contact-meta">Disponibilă pentru colaborări în România, remote și proiecte personale</p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="tel:+40740334757">
-                Call me
+                Sună-mă
               </a>
               <a className="button button-primary" href="mailto:lidiadobos03@gmail.com">
-                Send an email
+                Trimite email
               </a>
               <a
                 className="button button-secondary"
@@ -735,7 +690,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub profile
+                Profil GitHub
               </a>
             </div>
           </aside>
@@ -744,7 +699,7 @@ function App() {
 
       <footer className="site-footer">
         <p>Lidia Dobos</p>
-        <span>{currentYear} web designer, UI/UX designer, and product-focused portfolio</span>
+        <span>{currentYear} web designer, UI/UX designer, portofoliu orientat spre produs</span>
       </footer>
     </div>
   )
