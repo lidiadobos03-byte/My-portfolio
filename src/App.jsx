@@ -1,104 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
-
-const quickStats = [
-  {
-    value: '4 proiecte',
-    label: 'selectate pentru portofoliu',
-  },
-  {
-    value: '13 depozite publice',
-    label: 'experimente și proiecte vizibile',
-  },
-  {
-    value: 'Web + produs',
-    label: 'de la interfață la structură tehnică',
-  },
-]
-
-const highlights = [
-  {
-    title: 'Pagini complete',
-    text: 'Proiectele includ secțiuni reale, navigare, apeluri la acțiune și pagini pregătite pentru prezentare.',
-  },
-  {
-    title: 'Interfețe adaptabile',
-    text: 'Structuri vizuale adaptate pentru desktop și mobil, cu atenție la ritm, spațiere și lizibilitate.',
-  },
-  {
-    title: 'Structură tehnică',
-    text: 'Portofoliul include și proiecte de produs sau partea de server, nu doar pagini vizuale.',
-  },
-]
 
 const projects = [
   {
     code: '01',
-    title: 'AEVUM',
-    featured: true,
-    type: 'Concept premium pentru ceasuri de lux',
-    year: '2026',
-    role: 'Direcție de marcă + implementare interfață',
-    summary:
-      'Un concept de lux, cu mai multe pagini, care îmbină povestea mărcii, navigarea structurată și încrederea colecționarilor.',
-    impact:
-      'Combină secțiuni editoriale, catalog filtrabil, fluxuri de vânzare / schimb și resurse statice pregătite pentru lansare.',
-    stack: ['HTML5', 'CSS', 'JavaScript', 'Baze SEO'],
-    accent: '#8f7a55',
-    watermark: 'AE',
-    featuredEyebrow: 'Cel mai nou proiect evidențiat',
-    featuredHeadline: 'AEVUM este proiectul principal din portofoliu.',
-    featuredSectionNote:
-      'Un concept editorial de lux, cu pagini multiple, catalog filtrabil și trasee clare spre contact.',
-    featuredLead:
-      'Un concept pentru o casă de ceasuri, cu pagini de prezentare, catalog și flux de contact.',
-    featuredDirections: [
-      'Pagină principală editorială',
-      'Colecție filtrabilă',
-      'Flux pentru vânzare / schimb',
-      'Zonă de club privat',
-    ],
-    featuredMetrics: [
-      {
-        label: 'Pagini',
-        value: '7 pagini pregătite pentru lansare',
-      },
-      {
-        label: 'Catalog',
-        value: 'Navigare filtrabilă + solicitări',
-      },
-      {
-        label: 'Direcție',
-        value: 'Editorială, discretă, comercială',
-      },
-    ],
-    featuredSpotlight: {
-      label: 'Concept premium pentru ceasuri de lux',
-      title: 'Atmosferă editorială susținută de un catalog structurat.',
-      text:
-        'O experiență pentru colecționari, cu text atent, vizualuri de produs și trasee clare spre contact privat.',
-    },
-    links: [
-      {
-        label: 'Site publicat',
-        href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
-      },
-      {
-        label: 'GitHub',
-        href: 'https://github.com/lidiadobos03-byte/digital-catalogue',
-      },
-    ],
-  },
-  {
-    code: '02',
     title: 'WebCraft',
     type: 'Prezentare web',
     year: '2024 - Prezent',
-    role: 'Design de interfață și experiență + implementare interfață',
+    role: 'Design de interfață + implementare',
     summary:
-      'O prezentare cu mai multe pagini, patru concepte de nișă, structuri adaptabile și interacțiuni în JavaScript simplu.',
+      'Un showcase cu patru concepte de nișă: restaurant, corporate, fashion și servicii juridice.',
     impact:
-      'Arată versatilitate în direcții pentru restaurant, corporate, fashion și servicii juridice.',
+      'Arată versatilitate vizuală, pagini responsive și interacțiuni simple în JavaScript.',
     stack: ['HTML5', 'CSS', 'JavaScript', 'Design adaptabil'],
     accent: '#a9647e',
     links: [
@@ -113,18 +26,22 @@ const projects = [
     ],
   },
   {
-    code: '03',
+    code: '02',
     title: 'CVPerfect',
     type: 'Concept de produs',
     year: '2026',
     role: 'Design de produs + arhitectură',
     summary:
-      'Un concept complet pentru CV-uri, cu Next.js, Express, pregătire pentru plăți și fluxuri orientate spre PDF.',
+      'Un concept pentru CV-uri, cu pagini de produs, fluxuri pentru PDF și pregătire pentru plăți.',
     impact:
-      'Structurat pentru interfețe reutilizabile, utilitare de server și scalare viitoare.',
+      'Pune accent pe structură clară, componente reutilizabile și o direcție scalabilă.',
     stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
     accent: '#c3a0b2',
     links: [
+      {
+        label: 'Site publicat',
+        href: 'https://cvperfect.online',
+      },
       {
         label: 'GitHub',
         href: 'https://github.com/lidiadobos03-byte/cvperfect',
@@ -132,15 +49,38 @@ const projects = [
     ],
   },
   {
+    code: '03',
+    title: 'AEVUM',
+    type: 'Concept pentru ceasuri de lux',
+    year: '2026',
+    role: 'Direcție de marcă + interfață',
+    summary:
+      'Un site pentru o casă de ceasuri, cu pagini de prezentare, catalog și formular de contact.',
+    impact:
+      'Combină atmosferă editorială, catalog filtrabil și trasee clare pentru cereri private.',
+    stack: ['HTML5', 'CSS', 'JavaScript', 'Baze SEO'],
+    accent: '#8f7a55',
+    links: [
+      {
+        label: 'Site publicat',
+        href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
+      },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/lidiadobos03-byte/digital-catalogue',
+      },
+    ],
+  },
+  {
     code: '04',
     title: 'API pentru managementul sarcinilor',
-    type: 'Proiect de server pentru portofoliu',
+    type: 'Proiect de server',
     year: '2026',
     role: 'Structură API + organizare tehnică',
     summary:
       'Un REST API în Spring Boot pentru managementul sarcinilor, cu validare, filtrare, Swagger și teste.',
     impact:
-      'Arată structură de server dincolo de lucrul pe interfețe.',
+      'Completează portofoliul cu structură backend și logică tehnică dincolo de interfețe.',
     stack: ['Java 17', 'Spring Boot', 'JPA', 'Swagger'],
     accent: '#9da98d',
     links: [
@@ -152,36 +92,18 @@ const projects = [
   },
 ]
 
-const careerHighlights = [
-  {
-    step: '2021',
-    title: 'Magic Advertising',
-    text: 'Design grafic, vizualuri de campanie, suport pentru clienți și colaborare cu echipe de dezvoltare.',
-  },
-  {
-    step: '2018',
-    title: 'Aqua Dental Clinic',
-    text: 'Operațiuni și coordonare cu clienții în Londra, cu accent pe comunicare și ritm de lucru.',
-  },
-  {
-    step: 'Acum',
-    title: 'Direcția actuală',
-    text: 'Design web, design de interfață și implementare în browser pentru proiecte clare, adaptabile și ușor de prezentat.',
-  },
-]
-
 const skillGroups = [
   {
-    title: 'Direcție de design',
-    items: ['Design de interfață și experiență', 'Design web', 'Schițe de interfață', 'Prototipare', 'Sisteme de design'],
+    title: 'Design',
+    items: ['Design web', 'Design de interfață', 'Prototipare', 'Sisteme de design'],
   },
   {
     title: 'Implementare',
-    items: ['HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion', 'React'],
+    items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS'],
   },
   {
     title: 'Livrare',
-    items: ['Accesibilitate', 'Cercetare experiență utilizator', 'Optimizare conversii', 'Comunicare cu clienții', 'Colaborare la distanță'],
+    items: ['Accesibilitate', 'Structură responsive', 'Comunicare cu clienții', 'Colaborare la distanță'],
   },
 ]
 
@@ -198,8 +120,8 @@ const contactLinks = [
     external: true,
   },
   {
-    label: 'Cel mai nou proiect publicat',
-    value: 'lidiadobos03-byte.github.io/digital-catalogue',
+    label: 'Proiect recent',
+    value: 'AEVUM',
     href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
     external: true,
   },
@@ -209,9 +131,6 @@ const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`
 
 function App() {
   const currentYear = new Date().getFullYear()
-  const [heroPortraitError, setHeroPortraitError] = useState(false)
-  const featuredProject = projects.find((project) => project.featured)
-  const supportingProjects = projects.filter((project) => !project.featured)
 
   useEffect(() => {
     const nodes = Array.from(document.querySelectorAll('.reveal'))
@@ -268,218 +187,39 @@ function App() {
       </header>
 
       <main>
-        <section className="section hero-section" id="top">
-          <div className="hero-panel reveal">
-            <div className="panel-orbit panel-orbit-one" aria-hidden="true" />
-            <div className="panel-orbit panel-orbit-two" aria-hidden="true" />
-
-            <p className="panel-label">Portofoliu web / România</p>
-            <h2>Proiecte web vizuale, adaptabile și ușor de parcurs.</h2>
-            <p className="panel-copy">
-              O selecție de proiecte de interfață, prezentare, produs și server,
-              prezentate clar pentru colaborări în România sau la distanță.
-            </p>
-
-            <div className="hero-visual-stage">
-              <div className="hero-visual-mist" aria-hidden="true" />
-              <article className="hero-editorial-card">
-                <span>Proiect principal</span>
-                <strong>AEVUM, concept de lux cu pagini multiple și catalog filtrabil.</strong>
-                <p>
-                  Include pagină principală editorială, colecție, formular de interes și
-                  structură pregătită pentru prezentare.
-                </p>
-              </article>
-
-              <div className="hero-ribbon">
-                <span>În portofoliu</span>
-                <strong>AEVUM, WebCraft, CVPerfect și API pentru managementul sarcinilor</strong>
-              </div>
-
-              {heroPortraitError ? (
-                <div
-                  className="hero-portrait-fallback"
-                  role="img"
-                  aria-label="Înlocuitor de portret pentru Lidia Dobos"
-                >
-                  <span>LD</span>
-                </div>
-              ) : (
-                <img
-                  className="hero-portrait-close-image"
-                  src={publicAsset('lidia-portrait-fashion-cutout.png')}
-                  alt="Portret editorial cu Lidia Dobos"
-                  onError={() => setHeroPortraitError(true)}
-                />
-              )}
-            </div>
-
-            <ul className="stack-list" aria-label="Tehnologii principale">
-              <li>Figma</li>
-              <li>Design de interfață</li>
-              <li>Tailwind CSS</li>
-              <li>Framer Motion</li>
-              <li>React</li>
-              <li>Accesibilitate</li>
-            </ul>
-          </div>
-
-          <div className="hero-copy reveal delay-1">
-            <p className="eyebrow">Design web / interfețe / implementare</p>
-            <h1 className="hero-title">Portofoliu de proiecte web și produs.</h1>
+        <section className="section hero-section compact-hero" id="top">
+          <div className="hero-copy reveal">
+            <p className="eyebrow">Portofoliu Lidia Dobos</p>
+            <h1 className="hero-title">Design web, interfețe și proiecte digitale.</h1>
             <p className="hero-text">
-              Proiecte construite pentru prezentare clară: website-uri, concepte de
-              produs, interfețe adaptabile și un exemplu pentru partea de server.
-            </p>
-            <p className="hero-note">
-              Cel mai nou proiect: <strong>AEVUM</strong>, un concept de lux pentru
-              ceasuri, cu structură pe mai multe pagini și catalog filtrabil.
+              Creez website-uri și concepte de produs clare, responsive și ușor de
+              prezentat unui client sau unei echipe.
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                Vezi proiectele selectate
+                Vezi proiectele
               </a>
-              <a
-                className="button button-secondary"
-                href="https://github.com/lidiadobos03-byte"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Vezi GitHub
+              <a className="button button-secondary" href="#contact">
+                Contact
               </a>
             </div>
-
-            <ul className="stat-grid" aria-label="Puncte forte principale">
-              {quickStats.map((stat, index) => (
-                <li key={stat.value} className={`stat-card reveal delay-${Math.min(index + 1, 3)}`}>
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
-        <section className="section highlights-section">
+        <section className="section projects-section" id="projects">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">Ce arată portofoliul</p>
-              <h2>Proiecte complete, cu design, conținut și structură.</h2>
+              <p className="eyebrow">Proiecte selectate</p>
+              <h2>WebCraft, CVPerfect, AEVUM și restul proiectelor.</h2>
             </div>
             <p className="section-note">
-              Accentul cade pe lucrări vizibile: pagini, fluxuri, componente,
-              tehnologii și linkuri către site-uri publicate sau depozite de cod.
-            </p>
-          </div>
-
-          <div className="highlights-grid">
-            {highlights.map((highlight, index) => (
-              <article
-                key={highlight.title}
-                className={`highlight-card reveal delay-${index + 1}`}
-              >
-                <h3>{highlight.title}</h3>
-                <p>{highlight.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {featuredProject ? (
-          <section className="section flagship-section" id="projects">
-            <div className="flagship-header reveal">
-              <div>
-                <p className="eyebrow">
-                  {featuredProject.featuredEyebrow ?? 'Proiect evidențiat'}
-                </p>
-                <h2>
-                  {featuredProject.featuredHeadline ??
-                    `${featuredProject.title} este proiectul principal din portofoliu.`}
-                </h2>
-              </div>
-              <p className="section-note">
-                {featuredProject.featuredSectionNote ??
-                  'Include identitate vizuală, structură clară și implementare de interfață.'}
-              </p>
-            </div>
-
-            <div className="flagship-layout">
-              <article className="flagship-story reveal delay-1">
-                <span className="flagship-watermark" aria-hidden="true">
-                  {featuredProject.watermark ?? featuredProject.code}
-                </span>
-                <p className="flagship-label">
-                  {featuredProject.type} / {featuredProject.year}
-                </p>
-                <h3>{featuredProject.title}</h3>
-                <p className="flagship-lead">
-                  {featuredProject.featuredLead ??
-                    'Un proiect care combină direcție vizuală, structură de produs și implementare de interfață.'}
-                </p>
-                <p className="flagship-copy">{featuredProject.summary}</p>
-                <p className="flagship-copy">{featuredProject.impact}</p>
-
-                <ul className="flagship-directions" aria-label={`Repere ${featuredProject.title}`}>
-                  {(featuredProject.featuredDirections ?? []).map((direction) => (
-                    <li key={direction}>{direction}</li>
-                  ))}
-                </ul>
-
-                <div className="flagship-actions">
-                  {featuredProject.links.map((link) => (
-                    <a
-                      key={link.href}
-                      className="button button-primary"
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              </article>
-
-              <aside className="flagship-panel reveal delay-2">
-                <div className="flagship-stage">
-                  <article className="flagship-window flagship-window-main">
-                    <span>{featuredProject.featuredSpotlight?.label ?? 'Proiect evidențiat'}</span>
-                    <strong>
-                      {featuredProject.featuredSpotlight?.title ??
-                        'Prezență digitală cu structură clară.'}
-                    </strong>
-                    <p>{featuredProject.featuredSpotlight?.text ?? featuredProject.summary}</p>
-                  </article>
-
-                  <div className="flagship-window-grid">
-                    {(featuredProject.featuredMetrics ?? []).map((metric) => (
-                      <article key={metric.label} className="flagship-window">
-                        <span>{metric.label}</span>
-                        <strong>{metric.value}</strong>
-                      </article>
-                    ))}
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </section>
-        ) : null}
-
-        <section className="section projects-section">
-          <div className="section-header reveal">
-            <div>
-              <p className="eyebrow">Alte proiecte selectate</p>
-              <h2>Alte direcții: prezentare, produs și server.</h2>
-            </div>
-            <p className="section-note">
-              Fiecare card include pe scurt tipul proiectului, rolul, tehnologiile
-              și linkul relevant.
+              O listă scurtă, cu linkuri directe către site-uri publicate sau cod.
             </p>
           </div>
 
           <div className="projects-grid secondary-projects-grid">
-            {supportingProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <article
                 key={project.title}
                 className={`project-card reveal delay-${Math.min(index + 1, 3)}`}
@@ -527,7 +267,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section profile-section" id="about">
+        <section className="section profile-section compact-profile" id="about">
           <aside className="profile-visual reveal">
             <div className="profile-visual-frame">
               <img
@@ -536,43 +276,23 @@ function App() {
                 alt="Portret editorial alb-negru cu Lidia Dobos mergând"
               />
               <div className="profile-visual-overlay">
-                <span>Cadru editorial</span>
+                <span>Portofoliu</span>
                 <strong>
                   <span>Lidia</span>
                   <span>Dobos</span>
                 </strong>
-                <p>Designer web editorial / interfețe</p>
+                <p>Designer web / interfețe</p>
               </div>
-            </div>
-
-            <div className="profile-visual-caption">
-              <p className="eyebrow">Pe scurt</p>
-              <h3>Lidia Dobos</h3>
-              <p>
-                Design web, interfețe și implementare în browser, cu accent pe proiecte clare și prezentabile.
-              </p>
             </div>
           </aside>
 
           <article className="profile-copy reveal delay-1">
-            <p className="eyebrow">Pe scurt</p>
-            <p className="profile-intro">Design web, interfețe, implementare.</p>
-            <h2>Experiență practică în design vizual și proiecte digitale.</h2>
+            <p className="eyebrow">Despre</p>
+            <h2>Lucrez pe proiecte web clare, moderne și ușor de prezentat.</h2>
             <p>
-              Portofoliul pornește din design grafic și comunicare vizuală, apoi
-              merge spre design de interfață, implementare în browser și structură de produs.
+              Vin din design grafic și comunicare vizuală, iar în portofoliu combin
+              designul de interfață cu implementarea în browser.
             </p>
-            <p>
-              Mai jos sunt listate experiența relevantă și direcțiile tehnice care
-              susțin proiectele prezentate.
-            </p>
-
-            <div className="profile-quote">
-              <span>Focus</span>
-              <strong>
-                Proiecte web clare, adaptabile și ușor de explicat unui client sau unei echipe.
-              </strong>
-            </div>
 
             <div className="profile-facts">
               <article className="fact-card">
@@ -580,37 +300,9 @@ function App() {
                 <strong>România / La distanță</strong>
               </article>
               <article className="fact-card">
-                <span>Limbi</span>
-                <strong>Română, Engleză</strong>
-              </article>
-              <article className="fact-card">
-                <span>Focus</span>
-                <strong>Interfață clară + structură adaptabilă</strong>
-              </article>
-              <article className="fact-card">
                 <span>Proiecte</span>
                 <strong>Website-uri, portofolii, interfețe de produs</strong>
               </article>
-            </div>
-
-            <div className="profile-journey">
-              <p className="panel-label">Traseu profesional</p>
-              <div className="journey-list">
-                {careerHighlights.map((item) => (
-                  <article key={item.step} className="journey-card">
-                    <span className="journey-step">{item.step}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="profile-signoff">
-              <span>Direcție</span>
-              <strong>
-                Portofolii, pagini de prezentare și produse digitale cu structură clară.
-              </strong>
             </div>
           </article>
         </section>
@@ -619,10 +311,10 @@ function App() {
           <div className="section-header reveal">
             <div>
               <p className="eyebrow">Abilități</p>
-              <h2>Abilități folosite în proiectele din portofoliu.</h2>
+              <h2>Ce folosesc în proiecte.</h2>
             </div>
             <p className="section-note">
-              Lista rămâne practică: design, implementare și câteva aspecte de livrare.
+              Design, implementare și livrare într-o formă simplă de parcurs.
             </p>
           </div>
 
@@ -646,7 +338,7 @@ function App() {
         <section className="section contact-section" id="contact">
           <div className="contact-copy reveal">
             <p className="eyebrow">Contact</p>
-            <h2>Contact pentru proiecte web, portofolii sau interfețe de produs.</h2>
+            <h2>Contact pentru proiecte web sau interfețe de produs.</h2>
             <p>
               Pentru o colaborare în România sau la distanță, poți trimite un email,
               suna direct sau verifica proiectele de pe GitHub.
@@ -674,23 +366,12 @@ function App() {
               ))}
             </div>
 
-            <p className="contact-meta">România / La distanță</p>
-            <p className="contact-meta">Disponibilă pentru colaborări în România, la distanță și proiecte personale</p>
-
             <div className="hero-actions">
               <a className="button button-primary" href="tel:+40740334757">
                 Sună-mă
               </a>
               <a className="button button-primary" href="mailto:lidiadobos03@gmail.com">
                 Trimite email
-              </a>
-              <a
-                className="button button-secondary"
-                href="https://github.com/lidiadobos03-byte"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Profil GitHub
               </a>
             </div>
           </aside>
@@ -699,7 +380,7 @@ function App() {
 
       <footer className="site-footer">
         <p>Lidia Dobos</p>
-        <span>{currentYear} designer web, designer de interfețe, portofoliu orientat spre produs</span>
+        <span>{currentYear} designer web, designer de interfețe</span>
       </footer>
     </div>
   )

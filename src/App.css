@@ -143,6 +143,30 @@
   padding-top: 64px;
 }
 
+.compact-hero {
+  min-height: auto;
+  padding-top: 58px;
+  padding-bottom: 34px;
+}
+
+.compact-hero .hero-copy {
+  max-width: 760px;
+  padding: 0;
+}
+
+.compact-hero .hero-copy h1 {
+  max-width: 15ch;
+  font-size: clamp(2.45rem, 5vw, 4.6rem);
+}
+
+.compact-hero .hero-text {
+  max-width: 58ch;
+}
+
+.projects-section {
+  padding-top: 42px;
+}
+
 .profile-section,
 .contact-section {
   display: grid;
@@ -826,7 +850,7 @@
 }
 
 .secondary-projects-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .project-card {
