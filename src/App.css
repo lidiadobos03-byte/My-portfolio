@@ -275,10 +275,11 @@
 
 .hero-portrait {
   position: absolute;
-  right: max(-34px, -5vw);
-  bottom: -8px;
+  right: max(-18px, -2vw);
+  bottom: 0;
   z-index: 2;
-  width: min(78%, 570px);
+  width: auto;
+  height: calc(100% - 26px);
   max-width: none;
   filter: saturate(0.98) contrast(1.04) drop-shadow(0 34px 48px rgba(17, 22, 17, 0.22));
 }
@@ -561,6 +562,8 @@
 
 .contact-copy h2 {
   max-width: 9ch;
+  font-size: 4.45rem;
+  line-height: 0.94;
 }
 
 .contact-card {
@@ -725,8 +728,8 @@
   }
 
   .hero-portrait {
-    right: -68px;
-    width: min(98%, 520px);
+    right: -38px;
+    height: calc(100% - 24px);
   }
 
   .hero-frame {
@@ -750,6 +753,10 @@
   .section-header h2,
   .contact-copy h2 {
     font-size: 4rem;
+  }
+
+  .contact-copy h2 {
+    font-size: 3.35rem;
   }
 
   .project-panel {
@@ -829,6 +836,10 @@
     font-size: 3rem;
   }
 
+  .contact-copy h2 {
+    font-size: 2.45rem;
+  }
+
   .hero-visual {
     min-height: 455px;
   }
@@ -839,8 +850,8 @@
   }
 
   .hero-portrait {
-    right: -92px;
-    width: min(118%, 500px);
+    right: -76px;
+    height: calc(100% - 42px);
   }
 
   .hero-frame {

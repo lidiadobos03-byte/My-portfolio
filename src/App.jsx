@@ -31,29 +31,30 @@ const content = {
     },
     hero: {
       eyebrow: 'Portofoliu bilingv - RO / EN',
-      title: 'Experiente web cu aer editorial, construite pentru branduri care vor sa fie memorabile.',
+      title:
+        'Experiente web cu estetica editoriala. Construite pentru branduri care vor sa ramana memorabile.',
       text:
-        'Sunt Lidia Dobos si creez website-uri, concepte UI si prezentari digitale cu ritm vizual, claritate si atentie la detaliile care fac un brand sa para mai sigur pe el.',
+        'Creez website-uri premium, concepte UI si prezentari digitale unde claritatea intalneste impactul vizual. Ajut brandurile sa transmita incredere prin detalii executate impecabil.',
       primary: 'Vezi selectia',
       secondary: 'Contact',
       signature: 'Design web, UI si implementare front-end',
       wordmark: 'PORTOFOLIU',
       stageTitle: 'Digital atelier',
-      stageText: 'Portofoliu gandit ca o vitrina premium, nu ca o lista de proiecte.',
+      stageText: 'Un portofoliu gandit ca o expozitie premium, nu ca o lista de proiecte.',
       statOne: '04 proiecte',
       statTwo: 'RO / EN',
       statThree: 'Remote',
     },
     intro: {
       eyebrow: 'Pentru Aplux si branduri premium',
-      title: 'Design care vinde senzatia de calitate inainte de primul click.',
+      title: 'Design care transmite calitate inainte de primul click.',
       text:
-        'Pentru o companie precum Aplux, prima impresie trebuie sa transmita lux, incredere si confort. De aceea portofoliul pune accent pe compozitii mari, text scurt si rafinat, imagini puternice si detalii interactive fine.',
+        'Prima impresie trebuie sa inspire lux si confort vizual. De aceea, pun accent pe compozitii ample, tipografie rafinata si interactiuni subtile, adaptate brandurilor premium.',
       points: ['E-commerce premium', 'Landing pages memorabile', 'Identitate vizuala in browser'],
     },
     projectsHeader: {
       eyebrow: 'Selectie de proiecte',
-      title: 'Patru lucrari prezentate ca studii de brand.',
+      title: 'Proiecte selectate. Prezentate ca studii de caz.',
       note:
         'Am mutat accentul de pe lista clasica de tehnologii pe poveste, impact si directie vizuala.',
     },
@@ -65,7 +66,7 @@ const content = {
         year: '2024 - Prezent',
         role: 'UI design + implementare',
         summary:
-          'O colectie de concepte pentru nise diferite, gandita sa arate flexibilitate vizuala si control asupra layout-ului responsive.',
+          'O colectie de concepte premium ce demonstreaza flexibilitate vizuala, atentie la detalii si control absolut asupra layout-ului responsive.',
         impact:
           'Demonstreaza ca pot adapta stilul unui website la public, industrie si obiectiv, fara sa pierd claritatea.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'Responsive UI'],
@@ -79,7 +80,7 @@ const content = {
         year: '2026',
         role: 'Product design + arhitectura',
         summary:
-          'Un concept digital pentru generare de CV-uri, cu fluxuri clare pentru produs, continut si pregatire pentru monetizare.',
+          'Concept digital pentru generare de CV-uri. Focus pe fluxuri clare de utilizare, arhitectura curata a componentelor si scalabilitate.',
         impact:
           'Arata gandire de produs: structura, componente reutilizabile, trasee logice si scalabilitate.',
         stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
@@ -93,7 +94,7 @@ const content = {
         year: '2026',
         role: 'Directie de brand + interfata',
         summary:
-          'Un site pentru ceasuri de lux, cu atmosfera editoriala, catalog filtrabil si trasee clare pentru cereri private.',
+          'Digital flagship pentru ceasuri de lux. Estetica editoriala rigida, catalog interactiv si o experienta imersiva dedicata nisei premium.',
         impact:
           'Este proiectul care arata cel mai bine sensibilitatea pentru premium, ritm vizual si prezentare aspirationala.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
@@ -117,20 +118,20 @@ const content = {
     ],
     skillsHeader: {
       eyebrow: 'Capabilitati',
-      title: 'Ce pot livra intr-un proiect real.',
+      title: 'Ce aduc in fiecare proiect.',
       note:
-        'Designul arata bine doar daca poate fi construit, inteles si folosit usor.',
+        'Designul remarcabil are valoare doar daca este dublat de o executie tehnica impecabila si usurinta in utilizare.',
     },
     skills: [
       { title: 'Design', items: ['UI design', 'Web design', 'Directie vizuala', 'Prototipare'] },
       { title: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'React'] },
-      { title: 'Livrare', items: ['Responsive', 'Accesibilitate', 'Comunicare clara', 'GitHub'] },
+      { title: 'Standarde', items: ['Responsive', 'Accesibilitate', 'Cod curat / validat', 'Optimizare SEO'] },
     ],
     contact: {
       eyebrow: 'Contact',
-      title: 'Hai sa transformam prima impresie intr-un avantaj.',
+      title: 'Transformam prima impresie intr-un avantaj competitiv?',
       text:
-        'Pentru colaborari web, redesign-uri sau concepte UI premium, pot raspunde rapid pe email sau telefon.',
+        'Disponibila pentru proiecte de web design, redesign-uri de nisa si concepte UI premium. Raspund rapid pe email sau telefon.',
       quick: 'Contact rapid',
       phone: 'Telefon',
       github: 'GitHub',
@@ -153,29 +154,29 @@ const content = {
     },
     hero: {
       eyebrow: 'Bilingual portfolio - RO / EN',
-      title: 'Editorial web experiences for brands that want to feel memorable.',
+      title: 'Web experiences with editorial aesthetics. Built for brands that want to stay memorable.',
       text:
-        'I am Lidia Dobos, a web and UI designer creating digital concepts with visual rhythm, clarity and the kind of detail that makes a brand feel more confident.',
+        'I create premium websites, UI concepts and digital presentations where clarity meets visual impact. I help brands communicate trust through impeccably executed details.',
       primary: 'View selection',
       secondary: 'Contact',
       signature: 'Web design, UI and front-end implementation',
       wordmark: 'PORTFOLIO',
       stageTitle: 'Digital atelier',
-      stageText: 'A portfolio shaped like a premium showcase, not a project list.',
+      stageText: 'A portfolio designed as a premium exhibition, not a project list.',
       statOne: '04 projects',
       statTwo: 'RO / EN',
       statThree: 'Remote',
     },
     intro: {
       eyebrow: 'For Aplux and premium brands',
-      title: 'Design that sells quality before the first click.',
+      title: 'Design that communicates quality before the first click.',
       text:
-        'For a company like Aplux, the first impression should communicate luxury, trust and comfort. This portfolio leans into large compositions, refined copy, strong imagery and subtle interaction details.',
+        'The first impression should inspire luxury and visual comfort. That is why I focus on generous compositions, refined typography and subtle interactions adapted to premium brands.',
       points: ['Premium e-commerce', 'Memorable landing pages', 'Brand identity in browser'],
     },
     projectsHeader: {
       eyebrow: 'Selected work',
-      title: 'Four projects presented as brand studies.',
+      title: 'Selected projects. Presented as case studies.',
       note:
         'The focus moves from a classic technology list to story, impact and visual direction.',
     },
@@ -187,7 +188,7 @@ const content = {
         year: '2024 - Present',
         role: 'UI design + implementation',
         summary:
-          'A collection of niche concepts built to show visual flexibility and control over responsive layouts.',
+          'A collection of premium concepts that demonstrates visual flexibility, attention to detail and absolute control over responsive layouts.',
         impact:
           'Shows that I can adapt a website style to the audience, industry and goal without losing clarity.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'Responsive UI'],
@@ -201,7 +202,7 @@ const content = {
         year: '2026',
         role: 'Product design + architecture',
         summary:
-          'A digital concept for CV generation, with clear product flows, content structure and monetization readiness.',
+          'Digital concept for CV generation. Focused on clear user flows, clean component architecture and scalability.',
         impact:
           'Shows product thinking: structure, reusable components, logical journeys and scalability.',
         stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
@@ -215,7 +216,7 @@ const content = {
         year: '2026',
         role: 'Brand direction + interface',
         summary:
-          'A luxury watch website with editorial atmosphere, a filterable catalogue and clear paths for private requests.',
+          'Digital flagship for luxury watches. Rigorous editorial aesthetics, interactive catalogue and an immersive experience dedicated to the premium niche.',
         impact:
           'The strongest proof of premium sensibility, visual rhythm and aspirational presentation.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
@@ -239,20 +240,20 @@ const content = {
     ],
     skillsHeader: {
       eyebrow: 'Capabilities',
-      title: 'What I can deliver in a real project.',
+      title: 'What I bring to every project.',
       note:
-        'Design works best when it can be built, understood and used with ease.',
+        'Remarkable design has value only when it is supported by impeccable technical execution and ease of use.',
     },
     skills: [
       { title: 'Design', items: ['UI design', 'Web design', 'Visual direction', 'Prototyping'] },
       { title: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'React'] },
-      { title: 'Delivery', items: ['Responsive', 'Accessibility', 'Clear communication', 'GitHub'] },
+      { title: 'Standards', items: ['Responsive', 'Accessibility', 'Clean / validated code', 'SEO optimization'] },
     ],
     contact: {
       eyebrow: 'Contact',
-      title: 'Let us turn the first impression into an advantage.',
+      title: 'Shall we turn the first impression into a competitive advantage?',
       text:
-        'For web collaborations, redesigns or premium UI concepts, I can respond quickly by email or phone.',
+        'Available for web design projects, niche redesigns and premium UI concepts. I respond quickly by email or phone.',
       quick: 'Quick contact',
       phone: 'Phone',
       github: 'GitHub',
