@@ -1,136 +1,302 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 
-const projects = [
-  {
-    code: '01',
-    title: 'WebCraft',
-    type: 'Prezentare web',
-    year: '2024 - Prezent',
-    role: 'Design de interfață + implementare',
-    summary:
-      'Un showcase cu patru concepte de nișă: restaurant, corporate, fashion și servicii juridice.',
-    impact:
-      'Arată versatilitate vizuală, pagini responsive și interacțiuni simple în JavaScript.',
-    stack: ['HTML5', 'CSS', 'JavaScript', 'Design adaptabil'],
-    accent: '#a9647e',
-    links: [
-      {
-        label: 'Site publicat',
-        href: 'https://webcraft.cvperfect.online',
-      },
-      {
-        label: 'GitHub',
-        href: 'https://github.com/lidiadobos03-byte/webcraft',
-      },
-    ],
-  },
-  {
-    code: '02',
-    title: 'CVPerfect',
-    type: 'Concept de produs',
-    year: '2026',
-    role: 'Design de produs + arhitectură',
-    summary:
-      'Un concept pentru CV-uri, cu pagini de produs, fluxuri pentru PDF și pregătire pentru plăți.',
-    impact:
-      'Pune accent pe structură clară, componente reutilizabile și o direcție scalabilă.',
-    stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
-    accent: '#c3a0b2',
-    links: [
-      {
-        label: 'Site publicat',
-        href: 'https://cvperfect.online',
-      },
-      {
-        label: 'GitHub',
-        href: 'https://github.com/lidiadobos03-byte/cvperfect',
-      },
-    ],
-  },
-  {
-    code: '03',
-    title: 'AEVUM',
-    type: 'Concept pentru ceasuri de lux',
-    year: '2026',
-    role: 'Direcție de marcă + interfață',
-    summary:
-      'Un site pentru o casă de ceasuri, cu pagini de prezentare, catalog și formular de contact.',
-    impact:
-      'Combină atmosferă editorială, catalog filtrabil și trasee clare pentru cereri private.',
-    stack: ['HTML5', 'CSS', 'JavaScript', 'Baze SEO'],
-    accent: '#8f7a55',
-    links: [
-      {
-        label: 'Site publicat',
-        href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
-      },
-      {
-        label: 'GitHub',
-        href: 'https://github.com/lidiadobos03-byte/digital-catalogue',
-      },
-    ],
-  },
-  {
-    code: '04',
-    title: 'API pentru managementul sarcinilor',
-    type: 'Proiect de server',
-    year: '2026',
-    role: 'Structură API + organizare tehnică',
-    summary:
-      'Un REST API în Spring Boot pentru managementul sarcinilor, cu validare, filtrare, Swagger și teste.',
-    impact:
-      'Completează portofoliul cu structură backend și logică tehnică dincolo de interfețe.',
-    stack: ['Java 17', 'Spring Boot', 'JPA', 'Swagger'],
-    accent: '#9da98d',
-    links: [
-      {
-        label: 'GitHub',
-        href: 'https://github.com/lidiadobos03-byte/task-manager-api',
-      },
-    ],
-  },
-]
+const projectLinks = {
+  webcraft: [
+    { label: 'Live', href: 'https://webcraft.cvperfect.online' },
+    { label: 'GitHub', href: 'https://github.com/lidiadobos03-byte/webcraft' },
+  ],
+  cvperfect: [
+    { label: 'Live', href: 'https://cvperfect.online' },
+    { label: 'GitHub', href: 'https://github.com/lidiadobos03-byte/cvperfect' },
+  ],
+  aevum: [
+    { label: 'Live', href: 'https://lidiadobos03-byte.github.io/digital-catalogue/' },
+    { label: 'GitHub', href: 'https://github.com/lidiadobos03-byte/digital-catalogue' },
+  ],
+  itpex: [{ label: 'itpex.ro', href: 'https://itpex.ro' }],
+}
 
-const skillGroups = [
-  {
-    title: 'Design',
-    items: ['Design web', 'Design de interfață', 'Prototipare', 'Sisteme de design'],
+const content = {
+  ro: {
+    meta: {
+      role: 'Designer web / UI',
+      navLabel: 'Navigare principala',
+      availability: 'Disponibila pentru colaborari premium',
+    },
+    nav: {
+      projects: 'Proiecte',
+      skills: 'Abilitati',
+      contact: 'Contact',
+    },
+    hero: {
+      eyebrow: 'Portofoliu bilingv - RO / EN',
+      title: 'Experiente web cu aer editorial, construite pentru branduri care vor sa fie memorabile.',
+      text:
+        'Sunt Lidia Dobos si creez website-uri, concepte UI si prezentari digitale cu ritm vizual, claritate si atentie la detaliile care fac un brand sa para mai sigur pe el.',
+      primary: 'Vezi selectia',
+      secondary: 'Contact',
+      signature: 'Design web, UI si implementare front-end',
+      wordmark: 'PORTOFOLIU',
+      stageTitle: 'Digital atelier',
+      stageText: 'Portofoliu gandit ca o vitrina premium, nu ca o lista de proiecte.',
+      statOne: '04 proiecte',
+      statTwo: 'RO / EN',
+      statThree: 'Remote',
+    },
+    intro: {
+      eyebrow: 'Pentru Aplux si branduri premium',
+      title: 'Design care vinde senzatia de calitate inainte de primul click.',
+      text:
+        'Pentru o companie precum Aplux, prima impresie trebuie sa transmita lux, incredere si confort. De aceea portofoliul pune accent pe compozitii mari, text scurt si rafinat, imagini puternice si detalii interactive fine.',
+      points: ['E-commerce premium', 'Landing pages memorabile', 'Identitate vizuala in browser'],
+    },
+    projectsHeader: {
+      eyebrow: 'Selectie de proiecte',
+      title: 'Patru lucrari prezentate ca studii de brand.',
+      note:
+        'Am mutat accentul de pe lista clasica de tehnologii pe poveste, impact si directie vizuala.',
+    },
+    projects: [
+      {
+        code: '01',
+        title: 'WebCraft',
+        type: 'Showcase web',
+        year: '2024 - Prezent',
+        role: 'UI design + implementare',
+        summary:
+          'O colectie de concepte pentru nise diferite, gandita sa arate flexibilitate vizuala si control asupra layout-ului responsive.',
+        impact:
+          'Demonstreaza ca pot adapta stilul unui website la public, industrie si obiectiv, fara sa pierd claritatea.',
+        stack: ['HTML5', 'CSS', 'JavaScript', 'Responsive UI'],
+        accent: '#8e6f57',
+        links: projectLinks.webcraft,
+      },
+      {
+        code: '02',
+        title: 'CVPerfect',
+        type: 'Concept de produs',
+        year: '2026',
+        role: 'Product design + arhitectura',
+        summary:
+          'Un concept digital pentru generare de CV-uri, cu fluxuri clare pentru produs, continut si pregatire pentru monetizare.',
+        impact:
+          'Arata gandire de produs: structura, componente reutilizabile, trasee logice si scalabilitate.',
+        stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
+        accent: '#7d6477',
+        links: projectLinks.cvperfect,
+      },
+      {
+        code: '03',
+        title: 'AEVUM',
+        type: 'Luxury web concept',
+        year: '2026',
+        role: 'Directie de brand + interfata',
+        summary:
+          'Un site pentru ceasuri de lux, cu atmosfera editoriala, catalog filtrabil si trasee clare pentru cereri private.',
+        impact:
+          'Este proiectul care arata cel mai bine sensibilitatea pentru premium, ritm vizual si prezentare aspirationala.',
+        stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
+        accent: '#1f4d3a',
+        links: projectLinks.aevum,
+      },
+      {
+        code: '04',
+        title: 'ITPEX.ro',
+        type: 'Prezenta digitala',
+        year: '2026',
+        role: 'Website + rafinare vizuala',
+        summary:
+          'Un proiect inclus ca punct nou in portofoliu, prezentat curat si premium pentru a echilibra partea creativa cu increderea tehnica.',
+        impact:
+          'Completeaza selectia cu o piesa mai directa, potrivita pentru colaborari B2B si prezentari profesionale.',
+        stack: ['Website', 'UI polish', 'Structura clara', 'Brand presence'],
+        accent: '#4f6f66',
+        links: projectLinks.itpex,
+      },
+    ],
+    skillsHeader: {
+      eyebrow: 'Capabilitati',
+      title: 'Ce pot livra intr-un proiect real.',
+      note:
+        'Designul arata bine doar daca poate fi construit, inteles si folosit usor.',
+    },
+    skills: [
+      { title: 'Design', items: ['UI design', 'Web design', 'Directie vizuala', 'Prototipare'] },
+      { title: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'React'] },
+      { title: 'Livrare', items: ['Responsive', 'Accesibilitate', 'Comunicare clara', 'GitHub'] },
+    ],
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Hai sa transformam prima impresie intr-un avantaj.',
+      text:
+        'Pentru colaborari web, redesign-uri sau concepte UI premium, pot raspunde rapid pe email sau telefon.',
+      quick: 'Contact rapid',
+      phone: 'Telefon',
+      github: 'GitHub',
+      recent: 'Proiect recent',
+      call: 'Suna-ma',
+      email: 'Trimite email',
+    },
+    footer: 'designer web si designer de interfețe',
   },
-  {
-    title: 'Implementare',
-    items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS'],
+  en: {
+    meta: {
+      role: 'Web / UI Designer',
+      navLabel: 'Primary navigation',
+      availability: 'Available for premium collaborations',
+    },
+    nav: {
+      projects: 'Projects',
+      skills: 'Skills',
+      contact: 'Contact',
+    },
+    hero: {
+      eyebrow: 'Bilingual portfolio - RO / EN',
+      title: 'Editorial web experiences for brands that want to feel memorable.',
+      text:
+        'I am Lidia Dobos, a web and UI designer creating digital concepts with visual rhythm, clarity and the kind of detail that makes a brand feel more confident.',
+      primary: 'View selection',
+      secondary: 'Contact',
+      signature: 'Web design, UI and front-end implementation',
+      wordmark: 'PORTFOLIO',
+      stageTitle: 'Digital atelier',
+      stageText: 'A portfolio shaped like a premium showcase, not a project list.',
+      statOne: '04 projects',
+      statTwo: 'RO / EN',
+      statThree: 'Remote',
+    },
+    intro: {
+      eyebrow: 'For Aplux and premium brands',
+      title: 'Design that sells quality before the first click.',
+      text:
+        'For a company like Aplux, the first impression should communicate luxury, trust and comfort. This portfolio leans into large compositions, refined copy, strong imagery and subtle interaction details.',
+      points: ['Premium e-commerce', 'Memorable landing pages', 'Brand identity in browser'],
+    },
+    projectsHeader: {
+      eyebrow: 'Selected work',
+      title: 'Four projects presented as brand studies.',
+      note:
+        'The focus moves from a classic technology list to story, impact and visual direction.',
+    },
+    projects: [
+      {
+        code: '01',
+        title: 'WebCraft',
+        type: 'Web showcase',
+        year: '2024 - Present',
+        role: 'UI design + implementation',
+        summary:
+          'A collection of niche concepts built to show visual flexibility and control over responsive layouts.',
+        impact:
+          'Shows that I can adapt a website style to the audience, industry and goal without losing clarity.',
+        stack: ['HTML5', 'CSS', 'JavaScript', 'Responsive UI'],
+        accent: '#8e6f57',
+        links: projectLinks.webcraft,
+      },
+      {
+        code: '02',
+        title: 'CVPerfect',
+        type: 'Product concept',
+        year: '2026',
+        role: 'Product design + architecture',
+        summary:
+          'A digital concept for CV generation, with clear product flows, content structure and monetization readiness.',
+        impact:
+          'Shows product thinking: structure, reusable components, logical journeys and scalability.',
+        stack: ['Next.js', 'Node.js', 'Express', 'Stripe'],
+        accent: '#7d6477',
+        links: projectLinks.cvperfect,
+      },
+      {
+        code: '03',
+        title: 'AEVUM',
+        type: 'Luxury web concept',
+        year: '2026',
+        role: 'Brand direction + interface',
+        summary:
+          'A luxury watch website with editorial atmosphere, a filterable catalogue and clear paths for private requests.',
+        impact:
+          'The strongest proof of premium sensibility, visual rhythm and aspirational presentation.',
+        stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
+        accent: '#1f4d3a',
+        links: projectLinks.aevum,
+      },
+      {
+        code: '04',
+        title: 'ITPEX.ro',
+        type: 'Digital presence',
+        year: '2026',
+        role: 'Website + visual refinement',
+        summary:
+          'A new portfolio entry presented with a clean premium tone, balancing creative direction with technical confidence.',
+        impact:
+          'Completes the selection with a more direct B2B piece suited for professional collaborations.',
+        stack: ['Website', 'UI polish', 'Clear structure', 'Brand presence'],
+        accent: '#4f6f66',
+        links: projectLinks.itpex,
+      },
+    ],
+    skillsHeader: {
+      eyebrow: 'Capabilities',
+      title: 'What I can deliver in a real project.',
+      note:
+        'Design works best when it can be built, understood and used with ease.',
+    },
+    skills: [
+      { title: 'Design', items: ['UI design', 'Web design', 'Visual direction', 'Prototyping'] },
+      { title: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'React'] },
+      { title: 'Delivery', items: ['Responsive', 'Accessibility', 'Clear communication', 'GitHub'] },
+    ],
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Let us turn the first impression into an advantage.',
+      text:
+        'For web collaborations, redesigns or premium UI concepts, I can respond quickly by email or phone.',
+      quick: 'Quick contact',
+      phone: 'Phone',
+      github: 'GitHub',
+      recent: 'Recent project',
+      call: 'Call me',
+      email: 'Send email',
+    },
+    footer: 'web designer and interface designer',
   },
-  {
-    title: 'Livrare',
-    items: ['Accesibilitate', 'Structură responsive', 'Comunicare cu clienții', 'Colaborare la distanță'],
-  },
-]
-
-const contactLinks = [
-  {
-    label: 'Telefon',
-    value: '+40 740 334 757',
-    href: 'tel:+40740334757',
-  },
-  {
-    label: 'GitHub',
-    value: 'lidiadobos03-byte',
-    href: 'https://github.com/lidiadobos03-byte',
-    external: true,
-  },
-  {
-    label: 'Proiect recent',
-    value: 'AEVUM',
-    href: 'https://lidiadobos03-byte.github.io/digital-catalogue/',
-    external: true,
-  },
-]
+}
 
 const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`
 
 function App() {
+  const [language, setLanguage] = useState('ro')
   const currentYear = new Date().getFullYear()
+  const t = content[language]
+
+  const contactLinks = useMemo(
+    () => [
+      {
+        label: t.contact.phone,
+        value: '+40 740 334 757',
+        href: 'tel:+40740334757',
+      },
+      {
+        label: t.contact.github,
+        value: 'lidiadobos03-byte',
+        href: 'https://github.com/lidiadobos03-byte',
+        external: true,
+      },
+      {
+        label: t.contact.recent,
+        value: 'ITPEX.ro',
+        href: 'https://itpex.ro',
+        external: true,
+      },
+    ],
+    [t],
+  )
+
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   useEffect(() => {
     const nodes = Array.from(document.querySelectorAll('.reveal'))
@@ -157,7 +323,7 @@ function App() {
         })
       },
       {
-        threshold: 0.16,
+        threshold: 0.14,
         rootMargin: '0px 0px -8% 0px',
       },
     )
@@ -165,89 +331,127 @@ function App() {
     nodes.forEach((node) => observer.observe(node))
 
     return () => observer.disconnect()
-  }, [])
+  }, [language])
 
   return (
     <div className="page-shell">
       <header className="site-header">
-        <a className="brand" href="#top">
+        <a className="brand" href="#top" aria-label="Lidia Dobos">
           <span className="brand-mark">LD</span>
           <span className="brand-copy">
             <strong>Lidia Dobos</strong>
-            <span>Designer web / interfețe</span>
+            <span>{t.meta.role}</span>
           </span>
         </a>
 
-        <nav className="site-nav" aria-label="Navigare principală">
-          <a href="#projects">Proiecte</a>
-          <a href="#about">Despre</a>
-          <a href="#skills">Abilități</a>
-          <a href="#contact">Contact</a>
+        <nav className="site-nav" aria-label={t.meta.navLabel}>
+          <a href="#projects">{t.nav.projects}</a>
+          <a href="#skills">{t.nav.skills}</a>
+          <a href="#contact">{t.nav.contact}</a>
         </nav>
+
+        <div className="language-switch" aria-label="Language switcher">
+          {Object.keys(content).map((option) => (
+            <button
+              key={option}
+              className={language === option ? 'is-active' : ''}
+              type="button"
+              aria-pressed={language === option}
+              onClick={() => setLanguage(option)}
+            >
+              {option.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </header>
 
       <main>
-        <section className="section hero-section compact-hero" id="top">
+        <section className="hero-section" id="top">
           <div className="hero-copy reveal">
-            <p className="eyebrow">Portofoliu Lidia Dobos</p>
-            <h1 className="hero-title">Design web, interfețe și proiecte digitale.</h1>
-            <p className="hero-text">
-              Creez website-uri și concepte de produs clare, responsive și ușor de
-              prezentat unui client sau unei echipe.
-            </p>
+            <p className="eyebrow">{t.hero.eyebrow}</p>
+            <h1>{t.hero.title}</h1>
+            <p className="hero-text">{t.hero.text}</p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                Vezi proiectele
+                {t.hero.primary}
               </a>
               <a className="button button-secondary" href="#contact">
-                Contact
+                {t.hero.secondary}
               </a>
             </div>
+          </div>
+
+          <aside className="hero-visual reveal delay-1" aria-label={t.hero.signature}>
+            <div className="hero-wordmark">{t.hero.wordmark}</div>
+            <img
+              className="hero-portrait"
+              src={publicAsset('lidia-portrait-fashion-cutout.png')}
+              alt="Lidia Dobos portrait cutout"
+            />
+            <div className="hero-frame">
+              <p>{t.hero.stageTitle}</p>
+              <strong>{t.hero.stageText}</strong>
+            </div>
+            <div className="hero-stats" aria-label={t.hero.signature}>
+              <span>{t.hero.statOne}</span>
+              <span>{t.hero.statTwo}</span>
+              <span>{t.hero.statThree}</span>
+            </div>
+          </aside>
+        </section>
+
+        <section className="intro-strip reveal" id="direction">
+          <div>
+            <p className="eyebrow">{t.intro.eyebrow}</p>
+            <h2>{t.intro.title}</h2>
+          </div>
+          <div className="intro-copy">
+            <p>{t.intro.text}</p>
+            <ul aria-label={t.intro.eyebrow}>
+              {t.intro.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="section projects-section" id="projects">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">Proiecte selectate</p>
-              <h2>WebCraft, CVPerfect, AEVUM și restul proiectelor.</h2>
+              <p className="eyebrow">{t.projectsHeader.eyebrow}</p>
+              <h2>{t.projectsHeader.title}</h2>
             </div>
-            <p className="section-note">
-              O listă scurtă, cu linkuri directe către site-uri publicate sau cod.
-            </p>
+            <p>{t.projectsHeader.note}</p>
           </div>
 
-          <div className="projects-grid secondary-projects-grid">
-            {projects.map((project, index) => (
+          <div className="projects-list">
+            {t.projects.map((project, index) => (
               <article
                 key={project.title}
-                className={`project-card reveal delay-${Math.min(index + 1, 3)}`}
+                className={`project-panel reveal delay-${Math.min(index + 1, 3)}`}
+                style={{ '--project-accent': project.accent }}
               >
-                <div
-                  className="project-preview"
-                  style={{ '--project-accent': project.accent }}
-                >
+                <div className="project-number">
                   <span>{project.code}</span>
-                  <p>{project.role}</p>
                 </div>
 
-                <div className="project-body">
+                <div className="project-main">
                   <div className="project-topline">
-                    <span className="project-type">{project.type}</span>
-                    <span className="project-year">{project.year}</span>
+                    <span>{project.type}</span>
+                    <span>{project.year}</span>
                   </div>
-
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
-                  <p className="project-impact">{project.impact}</p>
+                </div>
 
-                  <ul className="tag-list" aria-label={`Tehnologii ${project.title}`}>
+                <div className="project-detail">
+                  <p>{project.impact}</p>
+                  <ul className="tag-list" aria-label={`${project.title} stack`}>
                     {project.stack.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-
                   <div className="project-actions">
                     {project.links.map((link) => (
                       <a
@@ -267,63 +471,18 @@ function App() {
           </div>
         </section>
 
-        <section className="section profile-section compact-profile" id="about">
-          <aside className="profile-visual reveal">
-            <div className="profile-visual-frame">
-              <img
-                className="profile-visual-image"
-                src={publicAsset('lidia-editorial-walk.jpg')}
-                alt="Portret editorial alb-negru cu Lidia Dobos mergând"
-              />
-              <div className="profile-visual-overlay">
-                <span>Portofoliu</span>
-                <strong>
-                  <span>Lidia</span>
-                  <span>Dobos</span>
-                </strong>
-                <p>Designer web / interfețe</p>
-              </div>
-            </div>
-          </aside>
-
-          <article className="profile-copy reveal delay-1">
-            <p className="eyebrow">Despre</p>
-            <h2>Lucrez pe proiecte web clare, moderne și ușor de prezentat.</h2>
-            <p>
-              Vin din design grafic și comunicare vizuală, iar în portofoliu combin
-              designul de interfață cu implementarea în browser.
-            </p>
-
-            <div className="profile-facts">
-              <article className="fact-card">
-                <span>Bază</span>
-                <strong>România / La distanță</strong>
-              </article>
-              <article className="fact-card">
-                <span>Proiecte</span>
-                <strong>Website-uri, portofolii, interfețe de produs</strong>
-              </article>
-            </div>
-          </article>
-        </section>
-
         <section className="section skills-section" id="skills">
           <div className="section-header reveal">
             <div>
-              <p className="eyebrow">Abilități</p>
-              <h2>Ce folosesc în proiecte.</h2>
+              <p className="eyebrow">{t.skillsHeader.eyebrow}</p>
+              <h2>{t.skillsHeader.title}</h2>
             </div>
-            <p className="section-note">
-              Design, implementare și livrare într-o formă simplă de parcurs.
-            </p>
+            <p>{t.skillsHeader.note}</p>
           </div>
 
           <div className="skills-grid">
-            {skillGroups.map((group, index) => (
-              <article
-                key={group.title}
-                className={`skill-card reveal delay-${Math.min(index + 1, 3)}`}
-              >
+            {t.skills.map((group, index) => (
+              <article key={group.title} className={`skill-card reveal delay-${index + 1}`}>
                 <h3>{group.title}</h3>
                 <ul>
                   {group.items.map((item) => (
@@ -335,18 +494,15 @@ function App() {
           </div>
         </section>
 
-        <section className="section contact-section" id="contact">
+        <section className="contact-section section" id="contact">
           <div className="contact-copy reveal">
-            <p className="eyebrow">Contact</p>
-            <h2>Contact pentru proiecte web sau interfețe de produs.</h2>
-            <p>
-              Pentru o colaborare în România sau la distanță, poți trimite un email,
-              suna direct sau verifica proiectele de pe GitHub.
-            </p>
+            <p className="eyebrow">{t.contact.eyebrow}</p>
+            <h2>{t.contact.title}</h2>
+            <p>{t.contact.text}</p>
           </div>
 
           <aside className="contact-card reveal delay-1">
-            <p className="panel-label">Contact rapid</p>
+            <p className="panel-label">{t.contact.quick}</p>
             <a className="contact-mail" href="mailto:lidiadobos03@gmail.com">
               lidiadobos03@gmail.com
             </a>
@@ -368,10 +524,10 @@ function App() {
 
             <div className="hero-actions">
               <a className="button button-primary" href="tel:+40740334757">
-                Sună-mă
+                {t.contact.call}
               </a>
-              <a className="button button-primary" href="mailto:lidiadobos03@gmail.com">
-                Trimite email
+              <a className="button button-secondary" href="mailto:lidiadobos03@gmail.com">
+                {t.contact.email}
               </a>
             </div>
           </aside>
@@ -380,7 +536,9 @@ function App() {
 
       <footer className="site-footer">
         <p>Lidia Dobos</p>
-        <span>{currentYear} designer web, designer de interfețe</span>
+        <span>
+          {currentYear} - {t.footer}
+        </span>
       </footer>
     </div>
   )
