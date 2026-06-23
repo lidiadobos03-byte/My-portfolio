@@ -46,7 +46,7 @@ const content = {
     },
     intro: {
       eyebrow: 'Design care face oaspeții să fotografieze înainte să mănânce.',
-      title: 'PENTRU CEI CARE ÎNDRĂZNESC SĂ IASĂ DIN MENIU.',
+      title: '',
       text:
         'Prima impresie trebuie sa inspire lux si confort vizual. De aceea, pun accent pe compozitii ample, tipografie rafinata si interactiuni subtile, adaptate brandurilor premium.',
       points: ['E-commerce premium', 'Landing pages memorabile', 'Identitate vizuala in browser'],
@@ -92,8 +92,7 @@ const content = {
         type: 'Luxury web concept',
         year: '2026',
         role: 'Directie de brand + interfata',
-        summary:
-          'Digital flagship pentru ceasuri de lux. Estetica editoriala rigida, catalog interactiv si o experienta imersiva dedicata nisei premium.',
+        summary: 'Digital flagship pentru ceasuri de lux.',
         impact:
           'Este proiectul care arata cel mai bine sensibilitatea pentru premium, ritm vizual si prezentare aspirationala.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
@@ -129,8 +128,7 @@ const content = {
     contact: {
       eyebrow: 'Contact',
       title: 'Transformam prima impresie intr-un avantaj competitiv?',
-      text:
-        'Disponibila pentru proiecte de web design, redesign-uri de nisa si concepte UI premium. Raspund rapid pe email sau telefon.',
+      text: '',
       quick: 'Contact rapid',
       phone: 'Telefon',
       github: 'GitHub',
@@ -138,7 +136,7 @@ const content = {
       call: 'Suna-ma',
       email: 'Trimite email',
     },
-    footer: 'designer web si designer de interfețe',
+    footer: 'web designer',
   },
   en: {
     meta: {
@@ -168,7 +166,7 @@ const content = {
     },
     intro: {
       eyebrow: 'Design that makes guests take photos before they eat.',
-      title: 'FOR THOSE WHO DARE TO STEP OFF THE MENU.',
+      title: '',
       text:
         'The first impression should inspire luxury and visual comfort. That is why I focus on generous compositions, refined typography and subtle interactions adapted to premium brands.',
       points: ['Premium e-commerce', 'Memorable landing pages', 'Brand identity in browser'],
@@ -214,8 +212,7 @@ const content = {
         type: 'Luxury web concept',
         year: '2026',
         role: 'Brand direction + interface',
-        summary:
-          'Digital flagship for luxury watches. Rigorous editorial aesthetics, interactive catalogue and an immersive experience dedicated to the premium niche.',
+        summary: 'Digital flagship for luxury watches.',
         impact:
           'The strongest proof of premium sensibility, visual rhythm and aspirational presentation.',
         stack: ['HTML5', 'CSS', 'JavaScript', 'SEO basics'],
@@ -251,8 +248,7 @@ const content = {
     contact: {
       eyebrow: 'Contact',
       title: 'Shall we turn the first impression into a competitive advantage?',
-      text:
-        'Available for web design projects, niche redesigns and premium UI concepts. I respond quickly by email or phone.',
+      text: '',
       quick: 'Quick contact',
       phone: 'Phone',
       github: 'GitHub',
@@ -260,7 +256,7 @@ const content = {
       call: 'Call me',
       email: 'Send email',
     },
-    footer: 'web designer and interface designer',
+    footer: 'web designer',
   },
 }
 
@@ -404,7 +400,7 @@ function App() {
         <section className="intro-strip reveal" id="direction">
           <div>
             <p className="eyebrow">{t.intro.eyebrow}</p>
-            <h2>{t.intro.title}</h2>
+            {t.intro.title ? <h2>{t.intro.title}</h2> : null}
           </div>
           <div className="intro-copy">
             <p>{t.intro.text}</p>
@@ -498,7 +494,7 @@ function App() {
           <div className="contact-copy reveal">
             <p className="eyebrow">{t.contact.eyebrow}</p>
             <h2>{t.contact.title}</h2>
-            <p>{t.contact.text}</p>
+            {t.contact.text ? <p>{t.contact.text}</p> : null}
           </div>
 
           <aside className="contact-card reveal delay-1">
