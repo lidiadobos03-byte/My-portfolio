@@ -351,6 +351,10 @@
   border-bottom: 1px solid var(--line);
 }
 
+.intro-strip > div:first-child {
+  grid-column: 1 / -1;
+}
+
 .intro-strip h2,
 .section-header h2,
 .contact-copy h2 {
@@ -359,9 +363,19 @@
   line-height: 0.88;
 }
 
+.intro-strip h2 {
+  max-width: 100%;
+  font-size: clamp(2.45rem, 3.15vw, 3.05rem);
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
 .intro-copy {
+  grid-column: 1 / -1;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
+  align-items: start;
 }
 
 .intro-copy ul,
@@ -755,6 +769,11 @@
     font-size: 4rem;
   }
 
+  .intro-strip h2 {
+    font-size: 3.45rem;
+    white-space: normal;
+  }
+
   .contact-copy h2 {
     font-size: 3.35rem;
   }
@@ -834,6 +853,10 @@
   .section-header h2,
   .contact-copy h2 {
     font-size: 3rem;
+  }
+
+  .intro-strip h2 {
+    font-size: 2.65rem;
   }
 
   .contact-copy h2 {

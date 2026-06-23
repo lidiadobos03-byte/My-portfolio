@@ -31,24 +31,22 @@ const content = {
     },
     hero: {
       eyebrow: 'Portofoliu bilingv - RO / EN',
-      title:
-        'Nu fac doar design. Construiesc identități care se simt, se văd și se țin minte.',
+      title: 'Brandul tău merită să arate la fel de bine pe cât funcționează.',
       text:
         'Creez website-uri premium, concepte UI si prezentari digitale unde claritatea intalneste impactul vizual. Ajut brandurile sa transmita incredere prin detalii executate impecabil.',
       primary: 'Vezi selectia',
       secondary: 'Contact',
       signature: 'Design web, UI si implementare front-end',
       wordmark: 'PORTOFOLIU',
-      stageTitle: 'Digital atelier',
+      stageTitle: '',
       stageText: 'Fiecare proiect, gândit de la concept până la pixel.',
       statOne: '04 proiecte',
       statTwo: 'RO / EN',
       statThree: 'Remote',
     },
     intro: {
-      eyebrow: 'Playful & bold',
-      title:
-        'PENTRU CEI CARE ÎNDRĂZNESC SĂ IASĂ DIN MENIU. Design care face oaspeții să fotografieze înainte să mănânce.',
+      eyebrow: 'Design care face oaspeții să fotografieze înainte să mănânce.',
+      title: 'PENTRU CEI CARE ÎNDRĂZNESC SĂ IASĂ DIN MENIU.',
       text:
         'Prima impresie trebuie sa inspire lux si confort vizual. De aceea, pun accent pe compozitii ample, tipografie rafinata si interactiuni subtile, adaptate brandurilor premium.',
       points: ['E-commerce premium', 'Landing pages memorabile', 'Identitate vizuala in browser'],
@@ -162,15 +160,15 @@ const content = {
       secondary: 'Contact',
       signature: 'Web design, UI and front-end implementation',
       wordmark: 'PORTFOLIO',
-      stageTitle: 'Digital atelier',
+      stageTitle: '',
       stageText: 'A portfolio designed as a premium exhibition, not a project list.',
       statOne: '04 projects',
       statTwo: 'RO / EN',
       statThree: 'Remote',
     },
     intro: {
-      eyebrow: 'For Aplux and premium brands',
-      title: 'Design that communicates quality before the first click.',
+      eyebrow: 'Design that makes guests take photos before they eat.',
+      title: 'FOR THOSE WHO DARE TO STEP OFF THE MENU.',
       text:
         'The first impression should inspire luxury and visual comfort. That is why I focus on generous compositions, refined typography and subtle interactions adapted to premium brands.',
       points: ['Premium e-commerce', 'Memorable landing pages', 'Brand identity in browser'],
@@ -392,7 +390,7 @@ function App() {
               alt="Lidia Dobos portrait cutout"
             />
             <div className="hero-frame">
-              <p>{t.hero.stageTitle}</p>
+              {t.hero.stageTitle ? <p>{t.hero.stageTitle}</p> : null}
               <strong>{t.hero.stageText}</strong>
             </div>
             <div className="hero-stats" aria-label={t.hero.signature}>
