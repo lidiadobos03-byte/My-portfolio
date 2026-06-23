@@ -153,7 +153,7 @@ const content = {
     },
     hero: {
       eyebrow: 'Bilingual portfolio - RO / EN',
-      title: 'Web experiences with editorial aesthetics. Built for brands that want to stay memorable.',
+      title: 'Your brand deserves to look as good as it works.',
       text:
         'I create premium websites, UI concepts and digital presentations where clarity meets visual impact. I help brands communicate trust through impeccably executed details.',
       primary: 'View selection',
@@ -161,7 +161,7 @@ const content = {
       signature: 'Web design, UI and front-end implementation',
       wordmark: 'PORTFOLIO',
       stageTitle: '',
-      stageText: 'A portfolio designed as a premium exhibition, not a project list.',
+      stageText: 'Every project, thought through from concept to pixel.',
       statOne: '04 projects',
       statTwo: 'RO / EN',
       statThree: 'Remote',
