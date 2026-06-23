@@ -32,7 +32,7 @@ const content = {
     hero: {
       eyebrow: 'Portofoliu bilingv - RO / EN',
       title:
-        'Experiente web cu estetica editoriala. Construite pentru branduri care vor sa ramana memorabile.',
+        'Nu fac doar design. Construiesc identități care se simt, se văd și se țin minte.',
       text:
         'Creez website-uri premium, concepte UI si prezentari digitale unde claritatea intalneste impactul vizual. Ajut brandurile sa transmita incredere prin detalii executate impecabil.',
       primary: 'Vezi selectia',
@@ -40,14 +40,15 @@ const content = {
       signature: 'Design web, UI si implementare front-end',
       wordmark: 'PORTOFOLIU',
       stageTitle: 'Digital atelier',
-      stageText: 'Un portofoliu gandit ca o expozitie premium, nu ca o lista de proiecte.',
+      stageText: 'Fiecare proiect, gândit de la concept până la pixel.',
       statOne: '04 proiecte',
       statTwo: 'RO / EN',
       statThree: 'Remote',
     },
     intro: {
-      eyebrow: 'Pentru Aplux si branduri premium',
-      title: 'Design care transmite calitate inainte de primul click.',
+      eyebrow: 'Playful & bold',
+      title:
+        'PENTRU CEI CARE ÎNDRĂZNESC SĂ IASĂ DIN MENIU. Design care face oaspeții să fotografieze înainte să mănânce.',
       text:
         'Prima impresie trebuie sa inspire lux si confort vizual. De aceea, pun accent pe compozitii ample, tipografie rafinata si interactiuni subtile, adaptate brandurilor premium.',
       points: ['E-commerce premium', 'Landing pages memorabile', 'Identitate vizuala in browser'],
